@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sign In Page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+<link href="static/images/icon.jpg" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="static/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/vendor/simple-datatables/style.css" rel="stylesheet">
+<link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="static/css/style2.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Mar 09 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<header id="header" class="fixed-top ">
+ <div class="container d-flex align-items-center justify-content-lg-between">
+
+  <!-- class="logo me-auto me-lg-0"><a href="index.html">Gp<span>.</span></a></h1> -->
+
+       <a href="/" class="logo me-auto me-lg-0"><img src="static/images/mine.jpg" alt="" class="img-fluid"></a>
+
+
+ <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/">About</a></li>
+            <!--
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i> -->
+      </nav><!-- .navbar -->
+
+
+    </div>
+  </header><!-- End Header -->
+<!-- Write your comments here -->
+
+<body>
+
+  <main>
+
+       {% if message %}
+    <div class="alert">{{ message }}</div>
+    {% endif %}
+
+
+    <div class="container" >
+
+      <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+              <div class="d-flex justify-content-center py-4">
+                <a href="index.html" class="logo d-flex align-items-center w-auto">
+                  <img src="assets/img/logo.png" alt="">
+                     <a href="index.html" class="logo me-auto me-lg-0"><img src="static/images/mine.jpg" alt="" class="img-fluid"></a>
+                </a>
+              </div><!-- End Logo -->
+
+              <div class="card mb-3">
+
+                <div class="card-body">
+
+                  <div class="pt-4 pb-2">
+                    <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
+                    <p class="text-center small">Enter your username & password to login</p>
+                  </div>
+
+               <form class="row g-3 needs-validation" method="POST" action="/login">
+                   <div class="col-12">
+                      <label for="yourUsername" class="form-label">Username</label>
+                      <div class="input-group has-validation">
+                           <input type="text" name="username" class="form-control" id="yourUsername" placeholder="Enter Student ID" required>
+                        <div class="invalid-feedback">Please enter your username.</div>
+                       </div>
+                  </div>
+
+                 <div class="col-12">
+                     <label for="yourPassword" class="form-label">Password</label>
+                     <input type="password" name="password" class="form-control" id="yourPassword" placeholder="Enter Istudent Password" required>
+                     <div class="invalid-feedback">Please enter your password!</div>
+                </div>
+
+                 <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
+                       <label class="form-check-label" for="rememberMe">Remember me</label>
+                   </div>
+                 </div>
+
+                   <!--- ADDITIONAL -->
+
+                   <script>
+  // Add an event listener to the login form
+  const loginForm = document.querySelector('form[action="/login"]');
+  loginForm.addEventListener('submit', function(event) {
+    // Check if the "Remember me" checkbox is checked
+    const rememberMeCheckbox = document.getElementById('rememberMe');
+    if (rememberMeCheckbox.checked) {
+      // If the checkbox is checked, store the user's login credentials in local storage
+      const usernameInput = document.getElementById('username');
+      const passwordInput = document.getElementById('password');
+      localStorage.setItem('username', usernameInput.value);
+      localStorage.setItem('password', passwordInput.value);
+    } else {
+      // If the checkbox is not checked, remove the user's login credentials from local storage
+      localStorage.removeItem('username');
+      localStorage.removeItem('password');
+    }
+  });
+
+  // When the page loads, check if the user's login credentials are stored in local storage
+  window.addEventListener('load', function(event) {
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+    const username = localStorage.getItem('username');
+    const password = localStorage.getItem('password');
+    if (username && password) {
+      // If the user's login credentials are stored, fill in the input fields
+      usernameInput.value = username;
+      passwordInput.value = password;
+      rememberMeCheckbox.checked = true;
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+                 <div class="col-12">
+                     <button class="btn btn-primary w-100" type="submit">Login</button>
+                 </div>
+
+
+              </form>
+
+
+                </div>
+              </div>
+
+              <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+                Designed by <a href="https://bootstrapmade.com/">NafeszAsyiqin</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main><!-- End #main -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/chart.js/chart.umd.js"></script>
+  <script src="static/vendor/echarts/echarts.min.js"></script>
+  <script src="static/vendor/quill/quill.min.js"></script>
+  <script src="static/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="static/vendor/tinymce/tinymce.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+
+</html>

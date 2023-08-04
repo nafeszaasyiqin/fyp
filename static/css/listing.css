@@ -1,0 +1,3066 @@
+/*listing page css starts*/
+.btn.active, .btn:active{
+    box-shadow: none;
+}
+/*Scrollbar section starts*/
+/*mozilla scrolbalken*/
+@-moz-document url-prefix(http://),url-prefix(https://) {
+scrollbar {
+   -moz-appearance: none !important;
+   background: #fff !important;
+}
+thumb,scrollbarbutton {
+   -moz-appearance: none !important;
+   background-color: #fff !important;
+}
+
+thumb:hover,scrollbarbutton:hover {
+   -moz-appearance: none !important;
+   background-color: #fff !important;
+}
+
+scrollbarbutton {
+   display: none !important;
+}
+
+scrollbar[orient="vertical"] {
+  min-width: 20px !important;
+}
+}
+
+/**/
+.ui-widget-content {
+    width: 250px !important;
+}
+#listing-page  #add-compare-modal {
+    z-index: 2222;
+}
+#listing-page .right > .common > .all.more::-webkit-scrollbar {
+    background: transparent;
+    width: 10px;
+}
+#listing-page .right > .common > .all.more::-webkit-scrollbar-thumb {
+    background-color: #68adcc;
+    border: solid #fff 2px;
+}
+#listing-page .right > .common > .all.more::-webkit-scrollbar-thumb:hover {
+    background-color: #68adcc;
+}
+/*Scrollbar section ends*/
+
+a, a:hover, .btn:focus{
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0;
+}
+header {
+    box-shadow: none;
+}
+#ads{
+    padding: 30px 0 5px;
+    background-color: #eaeaea;
+}
+
+.banner-add {
+    padding-top: 26px;
+    padding-bottom: 26px;
+}
+
+#breadcrumb {
+    background-color: #eaeaea;
+}
+#breadcrumb .breadcrumb {
+    background-color: transparent;
+    padding: 25px 0 20px;
+    margin: 0;
+}
+#breadcrumb .breadcrumb > li > a {
+    color: #60a9ca;
+    text-decoration: none;
+}
+#breadcrumb .breadcrumb > li > a > h3 {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0;
+}
+#breadcrumb .breadcrumb > li.active {
+    color: #555555;
+}
+#breadcrumb .breadcrumb > li.active > h3 {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0;
+    display: inline-block;
+}
+.breadcrumb>li+li:before {
+    padding: 0 6px 0 4px;
+    color: #555555;
+    content: "\003e";
+}
+
+#listing-page{
+    background-color: #eaeaea;
+}
+#listing-page label{
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    color: #777777;
+}
+/*checkbox starts*/
+#listing-page .checkbox{
+    margin: 13px 0 0;
+    color: #222222;
+    font-size: 12px;
+    line-height: 14px;
+}
+#listing-page .checkbox label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+#listing-page .checkbox .cr {
+    border: 1px solid #a4a4a4;
+    border-radius: 1px;
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-right: 10px;
+}
+#listing-page .checkbox .cr .cr-icon {
+    position: absolute;
+    font-size: 10px;
+    line-height: 0;
+    top: 42%;
+    left: 3px;
+    color: rgba(34, 34, 34, 0.64);
+}
+#listing-page .checkbox label input[type="checkbox"] {
+    display: none;
+}
+#listing-page .checkbox label input[type="checkbox"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+#listing-page .checkbox label input[type="checkbox"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+#listing-page .checkbox label input[type="checkbox"]:disabled + .cr {
+    opacity: .5;
+}
+/*checkbox ends*/
+.footer-list {
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+#listing-page #flip{
+    background-color: #939494;
+    padding: 3px 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+}
+#listing-page #flip > i.fa-chevron-down{
+    color: #fff;
+    font-size: 11px;
+    position: relative;
+    top: -1px;
+    left: 5px;
+}
+.scholorship-list {
+    padding-top: 26px;
+    padding-bottom: 30px;
+    text-align: center;
+
+}
+
+/*left block starts*/
+#listing-page .left{
+    width: 280px;
+    float: left;
+    margin: 0 2% 0 0;
+}
+#listing-page .left > .model{
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    -moz-box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    padding: 0 15px;
+    margin: 0 0 20px;
+}
+#listing-page .left > .model > .left-head{
+    color: #222222;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: #fbfbfb;
+    padding: 12px 15px;
+    margin: 0 -15px;
+}
+#listing-page .model-scroll-all .modal-content button.request.clearButton{
+  background-color: #60aacb;
+    border: none;
+    border-radius: 3px;
+
+    width: 68px;
+    float:left;
+}
+.uncheck{
+  color:#fff;
+}
+#listing-page .left > .model > .common{
+    border-bottom: 1px solid #dddddd;
+    padding: 15px 0 10px;
+    float: left;
+    width: 100%;
+}
+#listing-page .left > .model > .common-last{
+    border-bottom: 0px;
+}
+#listing-page .left > .model > .no-bor{
+    border-bottom: 0;
+}
+#listing-page .left > .model > .common > .head{
+    float: left;
+    width: 100%;
+}
+#listing-page .left > .model > .common > .head > label{
+    float: left;
+    font-size: 12px;
+    color: #222222;
+    text-transform: uppercase;
+    line-height: 16px;
+}
+#listing-page .left > .model > .common > .head > .btns{
+    float: right;
+}
+#listing-page .left > .model > .common > .head > .btns > a,
+#listing-page .left > .model > .common > .head > .btns > a:focus{
+    color: #b8b7b7;
+    font-size: 10px;
+    line-height: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+}
+#listing-page .left > .model > .common > .head > .btns > a.toggle:after {
+    font-family: 'robotoregular', sans-serif;
+    content: "hide";
+    color: #b8b7b7;
+    font-size: 10px;
+    line-height: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#listing-page .left > .model > .common > .head > .btns > a.toggle.collapsed:after {
+    content: "show";
+}
+#listing-page .left > .model > .common > .head > .btns > a.clear{
+    color: #222222;
+    margin: 0 6px 0 0;
+}
+#listing-page .left > .model > .common > .collapse,
+#listing-page .left > .model > .common .collapse{
+    padding: 10px 0 0;
+    float: left;
+    width: 100%;
+}
+#listing-page .left > .model > .common > .collapse > .form-group{
+    margin: 0 0 10px;
+}
+#listing-page .left > .model > .common > .collapse > .form-group .form-control{
+    background-color: #f2f2f2;
+    -webkit-box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0;
+    height: 38px;
+    color: #777777;
+    font-size: 12px;
+    border: 1px solid #dadada;
+}
+#listing-page .left > .model > .common > .collapse > .form-group .form-control-feedback {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #61aacb;
+}
+
+/*custom-tooltip block starts*/
+#listing-page .left > .model > .common > .head .custom-tooltip-icon{
+    font-size: 14px;
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+}
+#listing-page .left > .model > .common .custom-tooltip{
+    position: relative;
+    visibility: hidden;
+}
+#listing-page .left > .model > .common .head.active .custom-tooltip,
+#listing-page .left > .model > .common .head.active .arrow-up{
+ visibility: visible;
+}
+#listing-page .left > .model > .common .head .arrow-up {
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #d6d6d6;
+    float: right;
+    top: 19px;
+    position: relative;
+    right: 28px;
+    visibility:hidden;
+}
+#listing-page .left > .model > .common .custom-tooltip .sub{
+    background-color: #d6d6d6;
+    padding: 15px;
+    position: absolute;
+    z-index: 9999;
+    width: 230px;
+    top: 29px;
+    border-radius: 4px;
+    left: 0;
+}
+#listing-page .left > .model > .common .custom-tooltip .sub h5{
+    color: #222222;
+    font-size: 13px;
+    line-height: 16px;
+    font-family: "robotomedium", sans-serif;
+    margin: 5px 0 12px;
+}
+#listing-page .left > .model > .common .custom-tooltip .sub p{
+    color: #222222;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0 0 12px;
+}
+
+@media (max-width : 767px) {
+ #listing-page .left > .model > .common .custom-tooltip .sub h5 {
+     font-size: 12px;
+ }
+ #listing-page .left > .model > .common .custom-tooltip .sub p {
+     font-size: 11px;
+     line-height: 14px;
+ }
+}
+/*custom-tooltip block ends*/
+
+/*Modal css Starts*/
+#listing-page .model-scroll-all .modal-content{
+    border-radius: 0;
+    border: 0;
+}
+#listing-page .model-scroll-all .modal-content .modal-header{
+    background: #f5fbfa;
+    border: 0;
+    padding: 15px 25px;
+}
+#listing-page .model-scroll-all .modal-content .modal-header h4.media-title{
+    color: #222;
+    font-size: 18px;
+    padding: 0 20px;
+}
+#listing-page .model-scroll-all .modal-content .cont-body{
+    padding: 10px;
+    max-height: 300px;
+    overflow: auto;
+}
+#listing-page .model-scroll-all .modal-content .cont-body .checkbox{
+    margin: 0 0 10px;
+}
+#listing-page .model-scroll-all .modal-content .cont-body .media-left,
+#listing-page .model-scroll-all .modal-content .cont-body .media-right{
+    width: 256px;
+    max-width: 100%;
+    float: left;
+}
+#listing-page .model-scroll-all .modal-content button.request{
+    margin: 10px 0 0;
+    background-color: #60aacb;
+    width: 120px;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 6px 12px;
+    height: 38px;
+    border-radius: 2px;
+    float: right;
+}
+#listing-page .model-scroll-all .modal-content .modal-footer{
+    border-top:none;
+}
+/*Modal css ends*/
+
+
+#listing-page .left > .model > .common .checkbox{
+    font-size: 12px;
+    color: #444444;
+    line-height: 16px;
+    margin: 0 0 6px;
+    float: none;
+    width: 100% !important;
+}
+#listing-page .left > .model > .common .checkbox > label p{
+    float: right;
+    color: #b1b1b1;
+    padding: 0 0 0 5px;
+}
+#listing-page .left > .model > .common .checkbox .cr {
+    border: 1px solid #c1c1c1;
+    width: 18px;
+    height: 18px;
+    background: #f5f5f5;
+}
+#listing-page .left > .model > .common .checkbox .cr .cr-icon {
+    top: 44%;
+    left: 2%;
+    color: #f6f6fa;
+}
+#listing-page .left > .model > .common .checkbox label input[type="checkbox"]:checked + .cr {
+    background-color: #60aacb;
+    border: 1px solid #60aacb;
+}
+#listing-page .left > .model > .common a.view-all{
+    font-size: 10px;
+    color: #b8b7b7;
+    text-transform: uppercase;
+    line-height: 18px;
+    padding: 2px 2px 0;
+    display: block;
+}
+#listing-page .left > .model > .common .modal .checkbox .cr .cr-icon {
+    left: 1%;
+}
+#listing-page .left > .model > .common > .collapse span.seat{
+    color: #444444;
+    font-size: 11px;
+    line-height: 16px;
+    border-radius: 3px;
+    background-color: #e1e1e1;
+    padding: 2px 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 0 5px 6px 0;
+    float: left;
+}
+#listing-page .left > .model > .common > .collapse span.seat.active{
+    background-color: #60aacb;
+    color: #fff;
+}
+
+#listing-page .left > .ads {
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    -moz-box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    padding: 15px;
+    margin: 0 0 30px;
+    float: left;
+    width: 100%;
+}
+
+#listing-page .left > .recommend {
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    -moz-box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    padding: 35px 15px;
+    margin: 0 0 30px;
+    float: left;
+    width: 100%;
+}
+#listing-page .left > .recommend > h4{
+    font-size: 18px;
+    color: #222222;
+    margin: 0 0 18px;
+    line-height: 18px;
+    text-align: center;
+}
+#listing-page .left > .recommend > a{
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+    background-color: #61b448;
+    padding: 6px 12px;
+    height: 40px;
+    width: 88%;
+}
+/*price range block starts*/
+#listing-page .left > .model > .common .price-label{
+    font-size: 11px;
+    color: #222222;
+    text-align: center;
+    width: 100%;
+    border: 0;
+}
+#listing-page .left > .model > .common #slider-range.ui-widget-content {
+    border: 0;
+    background-color: #dddddd;
+    height: 3px;
+    border-radius: 0;
+    background-image: none;
+    font: inherit;
+    margin: 5px 0 10px;
+}
+#listing-page .left > .model > .common #slider-range .ui-widget-header{
+    background-color: #60aacb;
+    height: 3px;
+    border-radius: 0;
+    background-image: none;
+    font: inherit;
+}
+#listing-page .left > .model > .common #slider-range .ui-state-default,
+#listing-page .left > .model > .common #slider-range .ui-widget-content .ui-state-default,
+#listing-page .left > .model > .common #slider-range .ui-widget-header .ui-state-default {
+    border: 2px solid #d7d7d7;
+    background-color: #60aacb;
+    border-radius: 50%;
+}
+#listing-page .left > .model > .common #slider-range .ui-slider,
+#listing-page .left > .model > .common #slider-range .ui-slider-handle {
+    width: 18px;
+    height: 18px;
+    top: -7px;
+    margin-left: -1px;
+    cursor: pointer;
+}
+#listing-page .left > .model > .common #slider-range span:last-child{
+    margin-left: -16px;
+}
+/*price range block ends*/
+
+/*top courses block starts*/
+#listing-page .left .related-quest{
+    width: 100%;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    -moz-box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    margin: 0 0 20px;
+    float: left;
+}
+#listing-page .left .related-quest .quest-head{
+    background:#fbfbfb;
+    padding: 15px;
+    margin: 0 0 10px;
+}
+#listing-page .left .related-quest .quest-head h2{
+    font-family: "robotoregular", sans-serif;
+    font-size: 16px;
+    color: #222222;
+    margin: 0;
+    text-transform: capitalize;
+}
+#listing-page .left .related-quest .quest-body.one{
+    padding: 10px 0 0;
+}
+#listing-page .left .related-quest .quest-body.one .list{
+    padding: 0 15px 15px;
+}
+#listing-page .left .related-quest .quest-body .list .media-left{
+    width: 5%;
+    padding: 0;
+}
+#listing-page .left .related-quest .quest-body .list .media-right{
+    width: 95%;
+}
+#listing-page .left .related-quest .quest-body .list .media-right a > h3 {
+    color: #043658;
+    font-size: 14px;
+    font-family: "robotoregular", sans-serif;
+    line-height: 20px;
+    transition: 0.5s;
+    margin: 0;
+}
+#listing-page .left .related-quest .quest-body .list .media-right a p{
+    color: #555;
+}
+#listing-page .left .related-quest .quest-body .list .media-right a:hover > h3 {
+    text-decoration: underline;
+}
+#listing-page .left .related-quest .quest-footer{
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ebebeb;
+}
+#listing-page .left .related-quest .quest-footer a{
+    font-family: "robotolight", sans-serif;
+    font-size: 14px;
+    color: #025364;
+}
+#listing-page .left .related-quest .quest-footer a i{
+    font-size: 11px;
+    color: rgba(2, 83, 100, 0.4);
+}
+/*top courses block ends*/
+/*left block ends*/
+
+
+/*right block starts*/
+#listing-page .right{
+    width: 74.5%;
+    float: left;
+}
+#listing-page .right > h1{
+    line-height: 26px;
+    font-size: 24px;
+    color: #222222;
+    font-family: "robotolight",sans-serif;
+    margin: 0 0 25px;
+}
+
+#listing-page .right > .desc{
+    font-family: "robotoregular", sans-serif;
+    color: #777777 ;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+#listing-page .right > .desc a{
+    /*color: #60a9ca;*/
+    color : #777777;
+}
+
+#listing-page .right > .head{
+    padding: 10px 15px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    -moz-box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    float: left;
+    width: 100%;
+}
+#listing-page .right > .head > label{
+    font-size: 12px;
+    line-height: 16px;
+    color: #b8b7b7;
+}
+#listing-page .right > .head > .sort{
+    float: right;
+}
+#listing-page .right > .head > .sort > label{
+    font-size: 12px;
+    line-height: 16px;
+    color: #b8b7b7;
+}
+#listing-page .right > .head > .sort > a{
+    font-size: 12px;
+    line-height: 16px;
+    color: #b8b7b7;
+    margin: 0 4px;
+    padding: 0 8px;
+    cursor: pointer;
+}
+#listing-page .right > .head > .sort > a:hover{
+    color: #222222;
+    text-decoration: none;
+    border-bottom: 2px solid #c4d54a;
+    padding-bottom: 10px;
+}
+#listing-page .right > .head > .sort > a.active{
+    color: #222222;
+    text-decoration: none;
+    border-bottom: 2px solid #c4d54a;
+    padding-bottom: 12px;
+}
+#listing-page .right > .head > .sort > a.active > i ,
+#mobileFilter .dropdown-menu>li> a i{
+    color: #c4d54a;
+    font-size: 11px;
+    margin: 0 0 0 1px;
+}
+#mobileFilter .dropdown-menu>li> a i.active {
+    display: inline-block;
+}
+#mobileFilter .dropdown-menu>li> a i{
+    display: none;
+}
+#listing-page .right > .head > .sort > a > i{
+    display: none;
+}
+#listing-page .right > .head > .sort > a.active > i.active{
+    display: inline-block;
+}
+#listing-page .right > .head > .mob-sort{
+    display: none;
+}
+#listing-page .right > .selected{
+    margin: 12px 0 22px;
+    float: left;
+    width: 100%;
+}
+#listing-page .right > .selected > label{
+    font-size: 12px;
+    line-height: 20px;
+    color: #777777;
+    float: left;
+}
+#listing-page .right > .selected > .list{
+    float: left;
+}
+#listing-page .right > .selected > .list > h3{
+    border: solid 1px #c8c8c8;
+    margin: 0 4px;
+    padding: 2px 6px;
+    border-radius: 2px;
+    color: #b8b7b7;
+    font-size: 10px;
+    float: left;
+    text-transform: uppercase;
+    line-height: 1.42857143;
+}
+#listing-page .right > .selected > .list > h3 > span{
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 14px;
+    padding-left: 6px;
+}
+#listing-page .right > .selected > a{
+    font-size: 10px;
+    color: #020064;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin: 0 8px;
+    line-height: 18px;
+    float: left;
+    cursor: pointer;
+}
+#listing-page .right > .common{
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    -moz-box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    box-shadow: 0 1px 5px rgba(168,168,168,.3);
+    padding: 0;
+    margin: 0 0 15px;
+    border: 1px solid #f4f4f4;
+    float: left;
+    width: 100%;
+}
+#listing-page .right > .common:hover{
+    border: solid 1px #60aacb;
+}
+#listing-page .right > .common > .college-details{
+    position: relative;
+    padding: 15px;
+    float: left;
+    width: 100%;
+    background-color: #fbfbfb;
+}
+#listing-page .right > .common > .college-details .media-left{
+    width: 12%;
+    float: left;
+    padding: 14px 5px 15px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+
+#listing-page .right > .common > .college-details .feature {
+   position: absolute;    top: 0px;    right: 0px;
+
+}
+#listing-page .right > .common > .college-details .media-left img{
+    height: 33px;
+    width: auto;
+}
+#listing-page .right > .common > .college-details .media-right{
+    padding: 5px 0 0 15px;
+    /*width: 75%;
+    margin-right: 5%;*/
+    width: 63%;
+    margin-right: 1%;
+    float: left;
+}
+#listing-page .right > .common > .college-details .compare-detail{
+    float: left;
+    width: 15%;
+    padding-top: 13px;
+}
+#listing-page .right > .common > .college-details .compare-detail label {
+    font-size: 12px;
+    color: #777777;
+
+}
+#listing-page .right > .common > .college-details .media-right h2{
+    font-size: 16px;
+    color: #222222;
+    line-height: 30px;
+    margin: 0;
+}
+#listing-page .right > .common > .college-details .media-right .detail {
+    padding: 5px 0 0;
+    float: left;
+    width: 100%;
+}
+#listing-page .right > .common > .college-details .media-right .detail p,
+#listing-page .right > .common > .college-details .media-right .detail a {
+    float: left;
+    font-size: 14px;
+    color: #777777;
+    line-height: 18px;
+    border-right: 1px solid #777777;
+    padding: 0 25px 0 0;
+    margin-right: 25px;
+}
+#listing-page .right > .common > .college-details .media-right .detail a {
+    cursor: pointer;
+}
+#listing-page .right > .common > .college-details .media-right .detail a:hover{
+    text-decoration: none;
+    color: #01a0c1;
+}
+#listing-page .right > .common > .college-details .media-right .detail p:last-child,
+#listing-page .right > .common > .college-details .media-right .detail a:last-child {
+    border: 0;
+    margin: 0;
+}
+#listing-page .right > .common > .college-details .media-right .detail p>.icon-non-adver-icon_place-holder {
+    margin-right: 10px;
+    float: left;
+    font-size: 16px;
+
+}
+#listing-page .right > .common > .college-details .media-right .rating-block{
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "robotobold",sans-serif;
+}
+#listing-page .right > .common > .college-details .media-right .rating-block p{
+    font-family: "robotoregular",sans-serif;
+    margin: 0;
+    border: 0;
+    padding: 0 15px 0 0;
+}
+#listing-page .right > .common > .college-details .media-right .ratings{
+    float: left;
+    padding: 0px 0 0;
+}
+#listing-page .right > .common > .college-details .media-right .ratings span {
+    font-size: 14px;
+}
+#listing-page .right > .common > .college-details .media-right .ratings img{
+    padding: 0 1px;
+}
+#listing-page .right > .common > .college-details .media-cta{
+    float: right;
+    width: 8%;
+    padding: 25px 0 0;
+}
+#listing-page .right > .common > .college-details .media-cta a.green:hover {
+    background-color: #b1c234;
+    border: 1px solid #b1c234;
+    color: #fff;
+}
+#listing-page .right > .common > .college-details .media-cta a.green {
+    background-color: transparent;
+    border: 1px solid #b1c234;
+    padding: 7px 10px;
+    color: #b1c234;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 0;
+    cursor: pointer;
+}
+#listing-page .right > .common > a.view-all{
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    color: #025364;
+    padding: 12px 0 10px;
+    margin: 0;
+    border-top: 1px solid #dddddd;
+    font-family: "robotolight",sans-serif;
+    clear: both;
+    background-color: #fff;
+}
+#listing-page .right > .common > a.hide1{
+    text-align: center;
+    display: none;
+    font-size: 14px;
+    line-height: 16px;
+    color: #025364;
+    padding: 12px 0 10px;
+    margin: 0;
+    border-top: 1px solid #dddddd;
+    font-family: "robotolight",sans-serif;
+    clear: both;
+    background-color: #fff;
+}
+#listing-page .right > .common > a.view-all > i {
+    color: rgba(2, 83, 100, 0.7);
+    font-size: 10px;
+    padding: 0 5px;
+    padding: 3px 5px 0;
+    vertical-align: top;
+}
+#listing-page .right > .common > .all{
+    float: left;
+    width: 100%;
+    display: block;
+       -webkit-transition: 15s linear;
+    -o-transition: 15s linear;
+    transition: 15s linear;
+    height: 80px;
+    overflow: hidden;
+}
+#listing-page .right > .common > .all.more{
+    height: auto;
+    overflow: overlay;
+    max-height: 435px;
+}
+#listing-page .right > .common > .all > .head{
+    float: left;
+    width: 100%;
+    padding: 15px;
+    background-color: #eeeeee;
+}
+#listing-page .right > .common > .all > .head > p{
+    float: left;
+    color: #777777;
+    font-size: 16px;
+    line-height: 18px;
+}
+#listing-page .right > .common > .all > .head > p > span{
+    border-radius: 9px;
+    background-color: #020064;
+    color: #ffffff;
+    font-size: 10px;
+    line-height: 16px;
+    padding: 2px 3px;
+    margin: 0 4px;
+    text-align: center;
+}
+#listing-page .right > .common > .all > .head > a.view-less{
+    float: right;
+    border: 1px solid #14126e;
+    margin: 0;
+    padding: 1px 6px;
+    border-radius: 2px;
+    color: #777777;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+#listing-page .right > .common > .all > .head > a.view-less > span{
+    color: #14126e;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0 0 0 3px;
+}
+#listing-page .right > .common > .all > .contents{
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    padding: 0;
+}
+#listing-page .right > .common > .all > .contents > .common{
+    padding: 20px 15px;
+    border-bottom: 1px solid #ebebeb;
+    float: left;
+    width: 100%;
+}
+#listing-page .right > .common > .all > .contents > .common:last-child{
+    border: 0;
+}
+#listing-page .right > .common > .all > .contents > .common > .block{
+    float: left;
+    width: 100%;
+}
+#listing-page .right > .common > .all > .contents > .common > .block > .first{
+    float: left;
+    width: 56%;
+    margin-right: 5%;
+}
+#listing-page .right > .common > .all > .contents > .common > .block > .first > a{
+    color: #222222;
+}
+#listing-page .right > .common > .all > .contents > .common > .block > .first > a > h3{
+    font-size: 16px;
+    line-height: 18px;
+    font-family: "robotobold",sans-serif;
+    margin: 0;
+}
+#listing-page .right > .common > .all > .contents > .common > .block > .first > p{
+    color: #777777;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 5px 0 0;
+}
+#listing-page .right > .common > .all > .contents > .common > .block > .first > p > span{
+    padding: 0 6px;
+}
+#listing-page .right > .common > .all > .contents > .common > .block > .first > p > span:first-child{
+    padding-left: 0;
+}
+#listing-page .right > .common > .all > .contents > .common > .block > .compare{
+    float: left;
+    width: 10%;
+    margin-right: 0;
+}
+#listing-page .right > .common > .all > .contents > .common > .block > .compare > .checkbox {
+    margin: 14px 0 0;
+    color: #777777;
+    font-size: 14px;
+    line-height: 16px;
+}
+#listing-page .right > .common > .all > .contents > .common > .block > .last{
+    float: right;
+    width: 28%;
+    margin: 10px 0 0;
+}
+#listing-page .right > .common > .all > .contents > .common > .block > .last a.blue {
+    background-color: transparent;
+    border: 1px solid #01a0c1;
+    padding: 6px 16px;
+    color: #01a0c1;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 0 2px 0 0;
+    cursor: pointer;
+    height: 38px;
+}
+#listing-page .right > .common > .all > .contents > .common > .block > .last a.blue:hover{
+    background: #01a0c1;
+    color: #fff;
+}
+#listing-page .right > .common > .all > .contents > .common > .block > .last a.green {
+    padding: 6px 16px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 0;
+    cursor: pointer;
+    background-color: #b1c234;
+    border: 1px solid #abc316;
+    color: #fff;
+    height: 38px;
+}
+
+#listing-page .right > .ads{
+    padding: 0;
+    margin: 0 0 20px;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.footer-add {
+     margin-bottom: 48px;
+ }
+
+/*pagination-block starts*/
+.ads-border {
+    text-align:center;
+}
+
+/*pagination-block starts*/
+#listing-page .right > .pagination-block{
+    float: left;
+    width: 100%;
+    margin: 5px 0 48px;
+}
+#listing-page .right > .pagination-block > .showing{
+    float: left;
+    width: 40%;
+    color: #b8b7b7;
+    font-size: 12px;
+    line-height: 22px;
+}
+#listing-page .right > .pagination-block > .pagination{
+    float: right;
+    margin: 0 5px;
+}
+#listing-page .right > .pagination-block > .pagination>li>a {
+    padding: 1px 6px;
+    margin-left: 5px;
+    color: #a4a4a4;
+    font-size: 13px;
+    line-height: 18px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+}
+#listing-page .right > .pagination-block > .pagination>li.active>a,
+#listing-page .right > .pagination-block > .pagination>li>a:hover {
+    color: #a9a9a9;
+    background-color: #eeeeee;
+}
+#listing-page .right > .pagination-block > .pagination>li>a.prev,
+#listing-page .right > .pagination-block > .pagination>li>a.next{
+    color: #a2a2a2;
+    border: 1px solid transparent;
+    background-color: transparent;
+    font-size: 12px;
+    margin: 0;
+    padding: 1px 8px;
+}
+#listing-page .right > .pagination-block a.media-left,
+#listing-page .right > .pagination-block a.media-right{
+    display: none;
+}
+#listing-page.institute-listing-page .right > .common .c-right > .head > .h-left {
+    float: left;
+    width: 75%;
+    margin-right: 5%;
+}
+/*pagination-block ends*/
+/*right block ends*/
+
+/*Add-to-compare starts*/
+#listing-page #add-compare-box{
+    position: fixed;
+    bottom: 0;
+    background: rgba(83, 83, 83, 0.9);
+    padding: 10px;
+    display: none;
+    left: 165px;
+    width: 1010px;
+    z-index: 1111;
+}
+.ui-widget-content {
+    z-index: 4444 !important;
+}
+#listing-page #add-compare-box .add-menu{
+    display: block;
+    text-align: right;
+    margin: 0 0 10px;
+    float: right;
+    width: 100%;
+}
+#listing-page #add-compare-box .add-menu a{
+    color: #fff;
+    font-size: 12px;
+}
+#listing-page #add-compare-box .add-menu button.compare{
+    height: 31px;
+    color: #fff;
+    background-color: #12a6c7;
+    border-color: #12a6c7;
+    margin: 0 4px;
+    padding: 4px 50px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: "robotobold", sans-serif;
+    line-height: 16px;
+    -webkit-box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+#listing-page #add-compare-box .add-menu button.list-arrow{
+    padding: 0px 10px;
+    color: #12a6c7;
+    background: #393939;
+    float: right;
+    font-size: 20px;
+    border-radius: 3px;
+    border: 1px solid #12a6c7;
+}
+#listing-page #add-compare-box .add-box{
+    display: inline-block;
+}
+#listing-page #add-compare-box .add-box .common{
+    float: left;
+    background: #f5f5f5;
+    margin: 0 10px 0 0;
+    color: #333333;
+    width: 240px;
+    height: 65px;
+    max-width: 100%;
+    position: relative;
+    border: 1px solid #dadada;
+    cursor: pointer;
+}
+#listing-page #add-compare-box .add-box .common:hover{
+    border: 1px solid #12a6c7;
+}
+#listing-page #add-compare-box .add-box .last{
+    margin: 0;
+}
+#listing-page #add-compare-box .add-box .common .media-left{
+    float: left;
+    padding: 0;
+}
+#listing-page #add-compare-box .add-box .common .media-left .left-logo{
+    /*background: #fff;
+    padding: 11px 10px;*/
+    height: 64px;
+    background: #fff;
+    width: 70px;
+    align-items: center;
+    display: flex;
+}
+#listing-page #add-compare-box .add-box .common .media-left img {
+    padding: 5px;
+}
+#listing-page #add-compare-box .add-box .common .media-left img.add{
+    background: transparent;
+    padding: 9px 10px;
+}
+#listing-page #add-compare-box .add-box .common .media-right{
+    padding: 9px;
+    display: table;
+}
+#listing-page #add-compare-box .add-box .common .media-right h5{
+    font-size: 14px;
+    color: #999999;
+}
+#listing-page #add-compare-box .add-box .common:hover .media-right h5{
+    color: #12a6c7;
+}
+#listing-page #add-compare-box .add-box .common .media-right h6{
+    font-size: 12px;
+    color: #333333;
+    margin: 0;
+}
+#listing-page #add-compare-box .add-box .common .media-right p{
+    font-size: 12px;
+    color: #9b9b9b;
+}
+#listing-page #add-compare-box .add-box .common button.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0px 3px;
+    font-size: 16px;
+    font-weight: normal;
+    background: #dadada;
+    color: #606060;
+    opacity: 1;
+}
+/*Modal css Starts*/
+#listing-page .add-compare-modal .modal-content{
+    border-radius: 0;
+    border: 0;
+}
+#listing-page .add-compare-modal .modal-content .modal-header{
+    background: #fbfbfb;
+    border: 0;
+    padding: 15px 20px;
+}
+#listing-page .add-compare-modal .modal-content .modal-header h4.modal-title{
+    color: #222;
+    font-size: 16px;
+}
+#listing-page .add-compare-modal .modal-content .cont-body{
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+}
+#listing-page .add-compare-modal .form-group {
+    margin-bottom: 0;
+    position: relative;
+    width: 47%;
+    float: left;
+}
+#listing-page .add-compare-modal p{
+    float: left;
+    width: 6%;
+    font-size: 12px;
+    text-align: center;
+    margin: 18px 0;
+    color: #777777;
+}
+#listing-page .add-compare-modal p.alert-form{
+    width: 100%;
+    float: left;
+    text-align: left;
+    font-size: 14px;
+}
+#listing-page .add-compare-modal .form-group select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(http://images.afterschool.my/frontend/default/student/img/compare-institute/down.png) 94% / 6% no-repeat #eee;
+    box-shadow: none;
+    margin: 10px 0 10px;
+    height: 36px;
+    border: 1px solid #e1e1e1;
+}
+#listing-page .add-compare-modal input.form-control {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    margin: 10px 0 10px;
+    box-shadow: none;
+    height: 36px;
+}
+#listing-page .add-compare-modal .form-group .form-control-feedback {
+    color: #60a9ca;
+    height: 38px;
+    width: 38px;
+    top: 12px;
+}
+#listing-page .add-compare-modal .modal-content .cont-body .checkbox{
+    margin: 0 0 10px;
+}
+#listing-page .add-compare-modal .modal-content .cont-body .media-left,
+#listing-page .add-compare-modal .modal-content .cont-body .media-right{
+    width: 256px;
+    max-width: 100%;
+    float: left;
+}
+#listing-page .add-compare-modal .modal-content button.cancel{
+    padding: 6px 20px;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 10px 0 0;
+    color: #ffffff;
+    background: #12a6c7;
+    border: 1px solid #12a6c7;
+    height: 34px;
+    font-family: "robotobold", sans-serif;
+}
+#listing-page .add-compare-modal .modal-content button.request{
+    padding: 6px 20px;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 10px 0 0;
+    color: #ffffff;
+    background: #12a6c7;
+    border: 1px solid #12a6c7;
+    height: 34px;
+    font-family: "robotobold", sans-serif;
+}
+/*Modal css ends*/
+/*Add-to-compare ends*/
+
+/*media query starts*/
+@media (min-width : 992px) and (max-width : 1199px) {
+    #listing-page .left {
+        width: 280px;
+            margin: 0 1% 0 0;
+    }
+    #listing-page .left > .recommend > a {
+        font-size: 16px;
+    }
+    #listing-page .right {
+        width: 70.1%;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .first {
+        width: 62%;
+        margin-right: 2%;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .compare {
+        width: 13%;
+        margin-right: 3%;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .last {
+        width: 35%;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .last a.blue,
+    #listing-page .right > .common > .all > .contents > .common > .block > .last a.green {
+        padding: 6px 12px;
+    }
+    #listing-page .right > .common > .college-details .media-cta {
+        width: 7%;
+    }
+    #listing-page .right > .common > .all {
+        height: 95px;
+    }
+    #listing-page .right > .common > .college-details .media-right {
+        width: 61%;
+        margin-right: 1%;
+    }
+    #listing-page .right > .common > .college-details .compare-detail {
+        width: 19%;
+    }
+    #listing-page .right > .common > .college-details .compare-detail label {
+        font-size: 11px;
+    }
+}
+
+@media (min-width : 768px) and (max-width : 991px) {
+    #listing-page .left {
+        width: 100%;
+        margin: 0;
+        /*display: none;*/
+    }
+    #listing-page .left > .ads {
+        margin: 0 0 15px;
+        text-align: center;
+    }
+    /*top courses section starts*/
+    #listing-page .left .related-quest .quest-head{
+        padding: 10px;
+        margin: 0 0 5px;
+    }
+    #listing-page .left .related-quest .quest-head p{
+        font-size: 14px;
+    }
+    #listing-page .left .related-quest .quest-body.one .list{
+        padding: 0 10px 10px;
+    }
+    #listing-page .left .related-quest .quest-body .list .media-left{
+        width: 2%;
+    }
+    #listing-page .left .related-quest .quest-body .list .media-right a > h3 {
+        font-size: 13px;
+    }
+    #listing-page .left .related-quest .quest-footer{
+        padding: 7px;
+    }
+    #listing-page .left .related-quest .quest-footer a{
+        font-size: 13px;
+    }
+    /*top courses section ends*/
+    #listing-page .right > .common > .college-details .media-cta {
+        width: 7%;
+    }
+    #listing-page .right > .common > .college-details .compare-detail {
+        width: 19%;
+    }
+    #listing-page .right > .common > .college-details .media-right {
+        width: 61%;
+    }
+    #listing-page .right {
+        width: 100%;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .first {
+        width: 50%;
+        margin-right: 3%;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .compare {
+        width: 13%;
+        margin-right: 3%;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .last {
+        width: 30%;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .last a.blue,
+    #listing-page .right > .common > .all > .contents > .common > .block > .last a.green {
+        padding: 6px 8px;
+    }
+    #listing-page #panel{
+        overflow-x: hidden;
+        overflow-y: scroll;
+        /*position: fixed;*/
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 99999;
+        -webkit-overflow-scrolling: touch;
+        outline: 0;
+           -webkit-transition: opacity .15s linear;
+        -o-transition: opacity .15s linear;
+        transition: opacity .15s linear;
+        background-color: #eeeeee;
+    }
+    #listing-page #panel .panel-head{
+        background-color: #fff;
+        padding: 12px 15px 10px;
+        border-bottom: 1px solid#ccc;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        display: none;
+    }
+    #listing-page .left > .model > .left-head{
+       /* display: none;*/
+    }
+    #listing-page .left > .model {
+        margin: 0px 0 0px;
+    }
+    #listing-page #panel .panel-head > button{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+    #listing-page #panel .panel-head > span{
+        font-size: 12px;
+        color: #222222;
+        text-transform: uppercase;
+    }
+    #listing-page #panel .panel-head > a{
+        float: right;
+        padding-top: 1px;
+        font-size: 12px;
+        color: #222222;
+    }
+}
+
+@media (max-width : 767px) {
+    #breadcrumb{
+        padding: 0;
+    }
+    .scholorship-list{
+        padding: 30px 0 12px 0;
+        text-align: center;
+        background: #eee;
+    }
+
+    #listing-page.scholarship-listing-page .right > .common .middle > .m-right >.price.scholar{
+      padding: 6px 13px;
+      text-align: center;
+    }
+
+   .footer-list {
+        padding-bottom: 15px;
+        padding-top: 15px;
+        margin-bottom: 15px;
+        background: #fff;
+    }
+    header {
+        box-shadow: none;
+            z-index: 111;
+    }
+    #breadcrumb .breadcrumb {
+        padding: 0px 15px 11px 15px;
+    }
+    #breadcrumb .breadcrumb > li.active {
+        color: #c1c1c1;
+    }
+    #breadcrumb .breadcrumb > li.active > h3 {
+        font-size: 11px;
+    }
+    #breadcrumb .breadcrumb > li > a {
+        color: #c1c1c1;
+    }
+    #breadcrumb .breadcrumb > li > a > h3 {
+        font-size: 11px;
+    }
+    .breadcrumb>li+li:before {
+        color: #c1c1c1;
+    }
+    #listing-page .left {
+        width: 90%;
+        margin: 0;
+        display: none;
+    }
+    #listing-page .left > .model > .common .checkbox{
+        font-size: 12px;
+        color: #444444;
+        line-height: 16px;
+        margin: 0 0 6px;
+        float: none;
+        width: 100% !important;
+    }
+    /*top courses section starts*/
+    #listing-page .left .related-quest .quest-head{
+        padding: 10px;
+        margin: 0 0 5px;
+    }
+    #listing-page .left .related-quest .quest-head h2 {
+        font-size: 14px;
+    }
+    #listing-page .left .related-quest .quest-head p{
+        font-size: 12px;
+    }
+    #listing-page .left .related-quest .quest-body.one {
+        padding: 5px 0 0;
+    }
+    #listing-page .left .related-quest .quest-body.one .list{
+        padding: 0 10px 8px;
+    }
+    #listing-page .left .related-quest .quest-body .list .media-left{
+        width: 2%;
+    }
+    #listing-page .left .related-quest .quest-body .list .media-right a > h3 {
+        font-size: 12px;
+    }
+    #listing-page .left .related-quest .quest-footer{
+        padding: 7px;
+    }
+    #listing-page .left .related-quest .quest-footer a{
+        font-size: 12px;
+    }
+    /*top courses section ends*/
+    #listing-page .right >.common {
+        margin:0 0 15px ;
+    }
+    #listing-page .right {
+        width: 100%;
+    }
+    #listing-page .right > .common > .college-details {
+        position: relative;
+        padding: 20px 20px 0 20px;
+    }
+    #listing-page .right > .common > .college-details .feature {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    #listing-page .right > .common > .college-details .media-left {
+        width: 27%;
+        float: left;
+        /*margin: 0 auto;*/
+        display: block;
+    }
+    #listing-page .right > .common > .college-details .media-right {
+        padding: 0px 0;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0%;
+        position: relative;
+    }
+    #listing-page .right > .common > .college-details .media-right h2 {
+        font-size: 13px;
+        line-height: 22px;
+        top: -60px;
+        position: absolute;
+        left: 32%;
+    }
+    #listing-page .right > .common > .college-details .media-right .detail {
+        padding: 10px 0 10px;
+        border-bottom: 1px solid #ececec;
+    }
+    #listing-page .right > .common > .college-details .media-right .detail p,
+    #listing-page .right > .common > .college-details .media-right .detail a {
+        font-size: 9px;
+        padding: 0 8px 0 0;
+        margin-right: 8px;
+        border-color: #cdcdcd;
+    }
+    #listing-page .right > .common > .college-details .media-right .rating-block p{
+        padding: 0;
+        margin: 0 6px 0 0;
+    }
+    #listing-page .right > .common > .college-details .media-right .ratings {
+        padding:3px 0 0 0;
+    }
+    #listing-page .right > .common > .college-details .media-right .ratings span {
+        font-size: 10px;
+    }
+    #listing-page .right > .common > .college-details .media-cta {
+        float: none;
+        width: 15%;
+        padding: 15px 0 10px;
+        clear: both;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-right > button.price {
+        color: #60a9ca;
+    /* background-color: #60a9ca; */
+        border-color: #60a9ca;
+    }
+     #listing-page.institute-listing-page .right > .common .middle > .m-left > .common {
+        width: 100%;
+        margin: 0 0 10px;
+        padding: 0 1px;
+    }
+    #listing-page.institute-listing-page .right > .common .c-right {
+        width: 69%;
+        margin-left: 8px;
+    }
+
+     #listing-page.institute-listing-page .right > .common .middle > .m-left > .common > h6 {
+        font-size: 9px;
+        width: 50%;
+        float: left;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-left > .common > p {
+        font-size: 11px;
+        line-height: 12px;
+        float: left;
+        width: 45%;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .last a.blue {
+            margin: 0 8px 0 0;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .last a.blue,
+    #listing-page .right > .common > .all > .contents > .common > .block > .last a.green {
+        padding: 8px 10px;
+        font-size: 12px;
+        text-align: center;
+        width: 48%;
+        float: left;
+    }
+    #listing-page .right > .common > .all {
+        height: 140px;
+    }
+    #listing-page .right > h1 {
+        font-size: 13px;
+        /*font-family: "robotobold";*/
+        margin: 0 0 16px;
+        margin: 0 0px 14px;
+        padding-right: 12px;
+        line-height: 16px;
+    }
+    #listing-page .right > .head {
+       padding: 10px 15px;
+    }
+    #listing-page .right > .head > label,
+    #listing-page .right > .head > .sort > label,
+    #listing-page .right > .head > .sort > a {
+        font-size: 11px;
+    }
+    #listing-page .right > .head > .sort {
+        float: left;
+        display: none;
+    }
+    #listing-page .right > .head > .sort > a.active {
+        padding-bottom: 10px;
+    }
+
+    #listing-page .right > .head > .mob-sort{
+        float: right;
+        display: block;
+    }
+    #listing-page .right > .head > .mob-sort select{
+        border: none;
+        color: #bab8b8;
+        padding: 2px 12px;
+        font-size: 11px;
+        appearance:none;
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari and Chrome */
+        background: url(../img/compare-institute/down.png) 100% / 12% no-repeat #fff;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .first > p > span {
+        padding: 0 4px;
+    }
+
+    #listing-page .right > .selected > .list > h3 {
+        margin: 0 8px 9px 0;
+    }
+    #listing-page .right > .selected {
+        margin: 12px 5px 15px;
+    }
+    #listing-page .right > .common > a.view-all {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+    #listing-page .right > .common > .all > .head {
+        padding: 10px;
+    }
+    #listing-page .right > .common > .all > .head > p {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    #listing-page .right > .common > .all > .head > p > span {
+        font-size: 9px;
+        padding: 1px 2px;
+    }
+    #listing-page .right > .common > .all > .contents {
+        padding: 0 0px;
+    }
+    #listing-page .right > .common > .all > .contents > .common {
+        padding: 20px 0px;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .first,
+    #listing-page .right > .common > .all > .contents > .common > .block > .compare {
+        width: 100%;
+        margin: 0 0 12px;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .first {
+        padding: 0 20px;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .first > a > h3 {
+        font-size: 13px;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .first > p {
+        font-size: 11px;
+        line-height: 18px;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .compare > .checkbox {
+        margin: 6px 0 0;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .last {
+        float: left;
+        width: 100%;
+        padding: 0 20px;
+    }
+    #listing-page .right > .common > .all > .contents > .common > .block > .last > button {
+        height: 32px;
+        padding: 5px 10px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    #listing-page .right > .ads {
+        padding: 20px;
+        background: #fff;
+    }
+    #listing-page .right > .pagination-block{
+            margin: 0px 0 15px;
+    }
+    #listing-page .right > .pagination-block > .showing {
+        display: none;
+        width: 100%;
+        font-size: 12px;
+        line-height: 16px;
+        margin: 0 15px 12px;
+    }
+    #listing-page .right > .pagination-block > .pagination {
+        /*display: none;*/
+        float: left;
+    }
+    #listing-page .right > .pagination-block a.media-left,
+    #listing-page .right > .pagination-block a.media-right{
+        font-size: 12px;
+        color: #a4a3a3;
+        display: block;
+    }
+    #listing-page .right > .pagination-block p:hover{
+        color: #666666;
+    }
+    #listing-page .right > .pagination-block > .pagination>li>a {
+        padding: 1px 6px;
+        margin-left: 2px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    #listing-page .left > .recommend {
+        padding: 20px 15px;
+    }
+    #listing-page .left > .recommend > h4 {
+        font-size: 16px;
+        color: #222222;
+        margin: 0 0 15px;
+        line-height: 16px;
+        text-align: center;
+    }
+    #listing-page .left > .recommend > a {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 6px 12px;
+        height: 34px;
+        width: 75%;
+    }
+    #listing-page #panel{
+        overflow-x: hidden;
+        overflow-y: scroll;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1111;
+        -webkit-overflow-scrolling: touch;
+        outline: 0;
+           -webkit-transition: opacity .15s linear;
+        -o-transition: opacity .15s linear;
+        transition: opacity .15s linear;
+        background-color: #eeeeee;
+    }
+    .closeftr >.overlay {
+        z-index: 111 !important;
+    }
+    #listing-page #panel .panel-head{
+        background-color: #fff;
+        padding: 12px 15px 10px;
+        border-bottom: 1px solid#ccc;
+        text-align: center;
+        position: fixed;
+        width: 90%;
+        z-index: 999;
+    }
+    #listing-page .left > .model > .left-head{
+        display: none;
+    }
+    #listing-page .left > .model {
+        margin: 40px 0 20px;
+    }
+    #listing-page #panel .panel-head > button{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+    #listing-page.institute-listing-page .right > .common .c-right > .head > .h-left .ratings span {
+        font-size: 13px;
+    }
+    #listing-page #panel .panel-head > span{
+        font-size: 12px;
+        color: #222222;
+        text-transform: uppercase;
+    }
+    #listing-page #panel .panel-head > a{
+        float: right;
+        padding-top: 1px;
+        font-size: 12px;
+        color: #222222;
+    }
+
+    #listing-page #callback-modal .modal-dialog {
+        width: auto;
+    }
+    #listing-page #callback-modal .modal-dialog .modal-content .modal-header .close {
+        right: 0;
+        padding: 3px 8px;
+    }
+    #backtotop {
+        bottom: 63px;
+    }
+}
+/*media query ends*/
+/*listing page css ends*/
+
+
+/*institute listing page css starts*/
+#listing-page.institute-listing-page .right > .common {
+    background-color: #fff;
+    padding: 16px;
+    position: relative;
+}
+#listing-page.institute-listing-page .right > .common .h-top .feature {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+#listing-page.institute-listing-page .right > .common .c-left{
+    float: left;
+    width: 15%;
+    padding: 5px;
+    margin-right: 4%;
+    height: 70px;
+    position: relative;
+    top: 15px;
+}
+#listing-page.institute-listing-page .right > .common .c-right{
+    float: left;
+    width: 81%;
+}
+#listing-page.institute-listing-page .right > .common .c-right > .head{
+    float: left;
+    width: 100%;
+    margin: 0 0 20px;
+}
+#listing-page.institute-listing-page .right > .common .c-right > .head > .h-left{
+    float: left;
+    width: 65%;
+    margin-right: 5%;
+}
+#listing-page.institute-listing-page .right > .common {
+    background-color: #fff;
+    padding: 16px;
+}
+#listing-page.institute-listing-page .right > .common .c-right > .head > .h-left > a,
+#listing-page.institute-listing-page .right > .common .c-right > .head > .h-left > a:hover {
+    color: #1c1c1c;
+    text-decoration: none;
+    cursor: pointer;
+}
+#listing-page.institute-listing-page .right > .common .c-right > .head > .h-left > a > h2 {
+    font-size: 15px;
+    line-height: 24px;
+    font-family: "robotobold",sans-serif;
+    margin: 0 0 4px;
+}
+#listing-page.institute-listing-page .right > .common .c-right > .head > .h-left .rating-block p {
+    padding: 0 15px 0 0;
+    font-size: 14px;
+    color: #777777;
+}
+#listing-page.institute-listing-page .right > .common .c-right > .head > .h-left .ratings {
+    float: left;
+    padding: 2px 0 0;
+}
+#listing-page.institute-listing-page .right > .common .c-right > .head > .h-left .ratings img {
+    padding: 0 1px;
+}
+#listing-page.institute-listing-page .right > .common .c-right > .head > .h-right {
+    float: right;
+    width: 30%;
+}
+#listing-page.institute-listing-page .right > .common .c-right > .head > .h-right .checkbox{
+    color: #777777;
+    font-size: 13px;
+    /*text-transform: uppercase;*/
+    float: right;
+    width: 40%;
+}
+#listing-page.institute-listing-page .right > .common .c-right > .head > .h-right .btn {
+    float: right;
+    margin-right: 10px;
+    height: 38px;
+    font-size: 14px;
+    margin: 0 12px 0 0;
+    padding: 11px 0px;
+    line-height: 16px;
+    color: #b1c234;
+    width: 42%;
+    -webkit-box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    background-color: transparent;
+}
+#listing-page.institute-listing-page .right > .common .c-right > .head > .h-right .btn .fa-heart-o {
+    font-size: 16px;
+    padding-right: 10px;
+}
+#listing-page.institute-listing-page .right > .common .c-right > .head > .h-right .btn .fa-heart {
+    font-size: 16px;    padding-right: 10px;
+}
+#listing-page.institute-listing-page .right > .common .c-right > .middle > .m-right > button.price {
+    color: #fff;
+    background-color: #60a9ca;
+    border-color: #60a9ca;
+}
+
+#listing-page.institute-listing-page .right > .common .middle{
+    float: left;
+    width: 85%;
+    margin-left: 17%;
+    padding: 0px 15px;
+}
+#listing-page.institute-listing-page .right > .common .middle > .m-left{
+    float: left;
+    width: 70%;
+    margin-right: 4%;
+}
+#listing-page.institute-listing-page .right > .common .middle > .m-left > .common{
+    width: 30%;
+    float: left;
+    margin-right: 3%;
+}
+#listing-page.institute-listing-page .right > .common .middle > .m-left > .common > h6 {
+    color: #777777;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0;
+    text-transform: uppercase;
+}
+#listing-page.institute-listing-page .right > .common .middle > .m-left > .common > p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+}
+#listing-page.institute-listing-page .right > .common .middle > .m-right{
+    float: left;
+    width: 26%;
+}
+#listing-page.institute-listing-page .right > .common .middle > .m-right > button {
+    height: 36px;
+    background-color: transparent;
+    border: 1px solid #b1c234;
+    margin: 0 4px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #b1c234;
+    -webkit-box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+#listing-page.institute-listing-page .right > .common .middle > .m-right > button.price {
+    color: #fff;
+    float: right;
+     background-color: #60a9ca;
+    border-color: #60a9ca;
+}
+#listing-page.institute-listing-page .right > .common .middle > .m-right > button.price:hover {
+    color: #60a9ca;
+    background-color: #fff;
+    border-color: #60a9ca;
+}
+
+/*media query starts*/
+@media (min-width : 992px) and (max-width : 1199px) {
+    #listing-page.institute-listing-page .right > .common .c-left {
+        margin-right: 2%;
+        width: 13%;
+    }
+    #listing-page.institute-listing-page .right > .common .c-right {
+        width: 85%;
+    }
+    #listing-page.institute-listing-page .right > .common .c-right > .head > .h-left {
+        margin-right: 1%;
+        width: 63%;
+    }
+    #listing-page.institute-listing-page .right > .common .c-right > .head > .h-right {
+        width: 23%;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-left {
+        width: 66%;
+        margin-right: 2%;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-right {
+        width: 32%;
+    }
+    #listing-page.institute-listing-page .right > .common .c-right > .head > .h-right {
+        float: right;
+        width: 36% !important;
+    }
+    #listing-page.institute-listing-page .right > .common .middle {
+        width: 90%;
+        margin-left: 13%;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-left > .common > p {
+        font-size: 13px;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-left > .common > h6 {
+        font-size: 11px;
+    }
+}
+
+@media (min-width : 768px) and (max-width : 991px) {
+    #listing-page.institute-listing-page .right > .common .c-right > .head > .h-left {
+        margin-right: 3%;
+        width: 60%;
+    }
+    #listing-page.institute-listing-page .right > .common .c-right > .head > .h-right {
+        width: 22%;
+    }
+    #listing-page.institute-listing-page .right > .common .c-right > .head > .h-left > a > h2 {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-right > button {
+        height: 32px;
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width : 768px) {
+    #listing-page.institute-listing-page .right > .common .c-left img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width : 767px) {
+    #listing-page.institute-listing-page .right > .common .middle > .m-left > .common > h6 {
+        font-size: 9px;
+        width: 50%;
+        float: left;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-right > button.price {
+        color: #60a9ca;
+        background-color: #fff;
+        border-color: #60a9ca;
+    }
+    #listing-page.institute-listing-page .right > .common .c-right > .head > .h-left > a > h2 {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    #listing-page {
+        padding: 0 15px;
+    }
+    #listing-page.institute-listing-page .right > .common .middle{
+        float: left;
+        width: 100%;
+        padding: 16px 19px;
+        margin-left: 0;
+        border-bottom: 1px solid #ececec;
+    }
+    #listing-page.institute-listing-page .right > .common.last{
+        margin: 0;
+    }
+    #listing-page.institute-listing-page .right > .common .c-right > .head > .h-left .rating-block p {
+        padding: 0 10px 0 0;
+        font-size: 12px;
+    }
+    #listing-page.institute-listing-page .right > .common .c-right > .head > .h-right {
+        float: left;
+        width: 100%;
+    }
+      #listing-page.institute-listing-page .right > .common .middle > .m-right > button.price {
+        padding: 6px 27px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #listing-page.institute-listing-page .right > .common .middle > .m-right > button {
+        height: 38px;
+        font-size: 13px;
+        margin: 0 12px 0 0;
+        padding: 6px 11px;
+    }
+    #mobileFilter #flip img , #mobileFilter .right img{
+        padding-right: 10px;
+    }
+    #mobileFilter #flip p , #mobileFilter .right p{
+        text-align: center;
+        padding: 12px;
+        font-family: "robotolight";
+        font-size: 11px;
+        color: #777777;
+        height: 42px;
+        background: #fff;
+
+    }
+     #mobileFilter #flip p span {
+        font-size: 13px;
+        vertical-align: middle;
+        color: #898989;
+        padding-right: 10px;
+     }
+    #mobileFilter .right p .icon-soft-by {
+        font-size: 13px;
+        vertical-align: middle;
+        color: #9d9d9d;
+        padding-right: 10px;
+
+     }
+    #mobileFilter .right p{
+        float: left;
+        width: 50%;
+        /*background-color: #fff;*/
+        border-left: 1px solid #ececec;
+     }
+    #mobileFilter .dropdown-menu {
+        position: absolute;
+        top: 37px;
+        z-index: 1000;
+        float: left;
+        min-width: 50%;
+        padding: 5px 0px;
+        margin: 0px 0 0;
+        font-size: 11px;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #ccc;
+        border: 1px solid #ececec;
+        border-radius: 0px;
+       -webkit-box-shadow: -1px 2px 8px 0px rgba(0, 0, 0, 0.13);
+       -moz-box-shadow:    -1px 2px 8px 0px rgba(0, 0, 0, 0.13);
+       box-shadow:         -1px 2px 8px 0px rgba(0, 0, 0, 0.13);
+
+    }
+
+     #listing-page.institute-listing-page .right > .common .c-right > .head > .h-right .checkbox {
+        font-size: 11px;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-left {
+        width: 100%;
+        margin: 0 0 5px;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-left > .common {
+        width: 100%;
+        margin: 0 0 10px;
+        padding: 0 1px;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-left > .common:last-child {
+        margin: 0;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-right {
+        width: 100%;
+        margin-top: 18px;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-right > button {
+        height: 38px;
+        font-size: 13px;
+        margin: 0 12px 0 0;
+        padding: 6px 11px;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-right > button.price{
+        padding: 6px 15px;
+        float: left;
+        width: 47%;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-right > .mob-apply {
+        background-color: #bed638 !important;
+        color: #fff !important;
+        border-color: #abc316 !important;
+        margin: 0 0px 0 0 !important;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-left > .common > h6 {
+        font-size: 9px;
+        width: 50%;
+        float: left;
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-left > .common > p {
+        font-size: 11px;
+        line-height: 12px;
+        float: left;
+        width: 45%;
+        color: #555555;
+    }
+
+    #listing-page .right > .pagination-block .pagination-mobile-one{
+        width: 50%;
+        font-size: 12px;
+        color: #a4a3a3;
+        float: left;
+        padding-left: 20px;
+    }
+    #listing-page .right > .pagination-block .pagination-mobile-number {
+        width: 20%;
+        text-align: center;
+        font-family: "robotolight";
+        color: #1c1c1c;
+    }
+    #listing-page .right > .pagination-block .pagination-mobile-next{
+
+        padding-right: 20px;
+        float: right;
+        color: #000 !important;
+         font-size: 12px;
+        color: #a4a3a3;
+    }
+    #listing-page.institute-listing-page .right > .common .h-top{
+    background-color: #fbfbfb;
+    position: relative;
+    display: block;
+    width: 100%;
+    float: left;
+    padding: 19px 19px 5px;
+    }
+    #listing-page.institute-listing-page .right > .common .c-left {
+        width: 27%;
+        margin: 3px 0 15px;
+        border: 1px solid #dedede;
+        background: #fff;
+        height: auto;
+        top: 0;
+    }
+    #listing-page.institute-listing-page .right > .common .c-right {
+        width: 69%;
+        margin-left: 8px;
+    }
+    #listing-page.institute-listing-page .right > .common {
+        padding: 0;
+    }
+     #listing-page.institute-listing-page .right > .common .c-right > .head {
+        margin: 0 0 15px;
+    }
+     #listing-page.institute-listing-page .right > .common .c-right > .head > .h-left {
+        width: 100%;
+        margin-right: 0;
+    }
+    #mobileFilter {
+        width: 100%;
+        background-color: #fff;
+       /* position: relative;
+        top: 0px;*/
+        z-index: 111;
+        border-top: 1px solid #ececec;
+        -webkit-box-shadow: 2px 0px 0px 0px rgba(0, 0, 0, 0.5)
+        -moz-box-shadow:    2px 0px 0px 0px rgba(0, 0, 0, 0.5)
+        box-shadow:        2px 0px 0px 0px rgba(0, 0, 0, 0.5)
+    }
+    #listing-page.institute-listing-page .right > .common .middle > .m-left {
+        width: 100%;
+    }
+    .mobilefilder-fixed {
+        position: fixed;
+        top: 0px;
+    }
+    .ads-head {
+        background-color: #eeeeee;
+        padding-top: 30px;
+        padding-bottom: 12px;
+        text-align: center;
+    }
+    .ads-head  img {
+        width: 100%;
+    }
+    #mobileFilter #flip {
+        float: left;
+        width: 50%;
+    }
+    #listing-page .checkbox {
+        float: right;
+        width: 32%;
+    }
+     #listing-page .c-bottom >  button {
+        background-color: transparent;
+        height: 38px;
+        font-size: 13px;
+        margin: 0 10px 0 0;
+        padding: 0px 7px 6px 20%;
+        line-height: 16px;
+        color: #b1c234;
+        -webkit-box-shadow: 0 0 0 0;
+        box-shadow: 0 0 0 0;
+         padding-left: ;
+        outline: 0;
+
+     }
+     #listing-page .c-bottom >  button i {
+        padding-right: 4px;
+     }
+     #listing-page .c-bottom .checkbox {
+        float: right;
+        width: 50%;
+        margin: 9px 0 0;
+     }
+     #listing-page .c-bottom {
+        background-color: #fbfbfb;
+     }
+
+    #listing-page.institute-listing-page .m-bottom >  button {
+        background-color: transparent;
+        float: right;
+        height: 38px;
+        font-size: 13px;
+        margin: 0 12px 0 0;
+        padding: 6px 11px;
+        line-height: 16px;
+        color: #b1c234;
+        width: 30%;
+        -webkit-box-shadow: 0 0 0 0;
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
+    #listing-page.institute-listing-page .m-bottom >  button .fa-heart-o {
+        padding-right: 6px;
+        font-size: 14px;
+    }
+    #listing-page.institute-listing-page .right > .common .h-top .feature {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    #listing-page.institute-listing-page .m-bottom >  button .fa-heart{
+        padding-right: 6px;
+        font-size: 14px;
+    }
+}
+/*media query ends*/
+/*institute listing page css ends*/
+
+
+/*scholarship listing page css starts*/
+#listing-page.scholarship-listing-page{}
+#listing-page.scholarship-listing-page .left > .model > .common > .collapse > .model{
+    float: left;
+    width: 100%;
+}
+#listing-page.scholarship-listing-page .left > .model > .common > .collapse > .model > .common{
+    border: 1px solid #dddddd;
+    width: 33.3%;
+    float: left;
+    padding: 10px 10px 5px;
+    cursor: pointer;
+    height: 65px;
+}
+#listing-page.scholarship-listing-page .left > .model > .common > .collapse > .model > .common:hover,
+#listing-page.scholarship-listing-page .left > .model > .common > .collapse > .model > .common.active{
+    border-top: 3px solid #60aacb;
+}
+#listing-page.scholarship-listing-page .left > .model > .common > .collapse > .model > .common > img{
+    height: 25px;
+}
+#listing-page.scholarship-listing-page .left > .model > .common > .collapse > .model > .common > img.hover,
+#listing-page .left > .model > .common > .collapse > .model > .common:hover > img{
+    display: none;
+}
+#listing-page.scholarship-listing-page .left > .model > .common > .collapse > .model > .common:hover > img.hover{
+    display: block;
+}
+#listing-page.scholarship-listing-page .left > .model > .common > .collapse > .model > .common > p{
+    font-size: 10px;
+    color: #444444;
+    line-height: 16px;
+    text-align: center;
+    padding-top: 6px;
+    text-transform: uppercase;
+}
+#listing-page.scholarship-listing-page .right > .common {
+    background-color: #fff;
+    padding: 15px;
+}
+#listing-page.scholarship-listing-page .right > .common.last{
+    margin: 0;
+}
+
+#listing-page.scholarship-listing-page .right > .common > img.featured{
+    float: right;
+    margin: -15px -15px -35px;
+}
+#listing-page.scholarship-listing-page .right > .common .c-left{
+    float: left;
+    width: 15%;
+    padding: 25px 2px 0;
+    margin-right: 4%;
+}
+#listing-page.scholarship-listing-page .right > .common .c-right{
+    float: left;
+    width: 81%;
+}
+#listing-page.scholarship-listing-page .right > .common .c-right > .head{
+    float: left;
+    width: 100%;
+    margin: 0 0 20px;
+}
+#listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left{
+    float: left;
+    width: 72%;
+    margin-right: 5%;
+}
+#listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left > a,
+#listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left > a:hover{
+    color: #222222;
+    float: left;
+    width: 100%;
+    padding: 0 0 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left > a > h2{
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "robotobold",sans-serif;
+    margin: 0;
+}
+#listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left .rating-block p.deadline{
+    border: 1px solid #60aacb;
+}
+#listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left .rating-block p {
+    font-size: 12px;
+    line-height: 16px;
+    color: #a7a7a7;
+    float: left;
+    text-transform: uppercase;
+    border: 1px solid #ccc;
+    margin: 0 8px 0 0;
+    border-radius: 4px;
+    padding: 2px 8px;
+}
+#listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left .rating-block p.deadline{
+    color: #60aacb;
+}
+#listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left .rating-block p.deadline>b{
+    font-family: "robotobold",sans-serif;
+}
+#listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-right{
+    float: right;
+    width: 23%;
+}
+#listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-right .checkbox{
+    color: #777777;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+#listing-page.scholarship-listing-page .right > .common .middle{
+    float: left;
+    width: 81%;
+    margin-left: 19%;
+
+}
+#listing-page.scholarship-listing-page .right > .common .middle > .m-left{
+    float: left;
+    width: 70%;
+    margin-right: 4%;
+}
+#listing-page.scholarship-listing-page .right > .common .middle > .m-left > .common{
+    width: 30%;
+    float: left;
+    margin-right: 3%;
+}
+#listing-page.scholarship-listing-page .right > .common .middle > .m-left > .common > h6 {
+    color: #777777;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0;
+    text-transform: uppercase;
+}
+#listing-page.scholarship-listing-page .right > .common .middle > .m-left > .common > p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+}
+#listing-page.scholarship-listing-page .right > .common .middle > .m-right{
+    float: left;
+    width: 26%;
+}
+#listing-page.scholarship-listing-page .right > .common .middle > .m-right > .btn {
+    height: 36px;
+    background-color: transparent;
+    border: 1px solid #b1c234;
+    margin: 0 4px;
+    padding: 8px 36px;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #b1c234;
+    -webkit-box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    float: right;
+}
+#listing-page.scholarship-listing-page .right > .common .middle > .m-right > .price {
+    color: #fff;
+    background-color: #60a9ca;
+    border-color: #60a9ca;
+}
+#listing-page.scholarship-listing-page .right > .common .middle > .m-right >.price a{
+    color: #fff;
+}
+#listing-page.scholarship-listing-page .right > .common .middle > .m-right >.price.scholar {
+        padding: 8px 22px;
+}
+#listing-page.scholarship-listing-page .right > .common .middle > .m-right > button.contact{
+    padding: 6px 13px;
+}
+
+
+/*media query starts*/
+@media (min-width : 992px) and (max-width : 1199px) {
+    #listing-page.scholarship-listing-page .right > .common .c-left {
+        margin-right: 2%;
+    }
+    #listing-page.scholarship-listing-page .right > .common .c-right {
+        width: 83%;
+    }
+    #listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left {
+        margin-right: 2%;
+    }
+    #listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-right {
+        width: 23%;
+    }
+    #listing-page.scholarship-listing-page .right > .common .middle > .m-left {
+        width: 66%;
+        margin-right: 2%;
+    }
+    #listing-page.scholarship-listing-page .right > .common .middle > .m-right {
+        width: 32%;
+    }
+    /*Add compare*/
+    #listing-page #add-compare-box{
+        left: 0;
+    }
+    #listing-page #add-compare-box .add-box{
+        display: inline-block;
+    }
+}
+
+@media (min-width : 768px) and (max-width : 991px) {
+    #listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left {
+        margin-right: 3%;
+    }
+    #listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-right {
+        width: 25%;
+    }
+    #listing-page.scholarship-listing-page .right > .common .middle > .m-right > .btn {
+        height: 32px;
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+    #listing-page.institute-listing-page .right > .common .c-right > .head > .h-right {
+        float: right;
+        width: 37%;
+    }
+
+    /*Add Compare css Starts*/
+/*add-compare starts*/
+    #listing-page .add-compare-modal .form-group {
+        width: 100%;
+    }
+    #listing-page .add-compare-modal p{
+        width: 100%;
+    }
+    #listing-page #add-compare-box{
+    left: 0;
+    width: 100%;
+    overflow: auto;
+    }
+    #listing-page #add-compare-box .add-menu{
+        float: left;
+        text-align: inherit;
+    }
+    #listing-page #add-compare-box .add-box{
+        display: inline-flex;
+        overflow: overlay;
+    }
+    #listing-page #add-compare-box .add-box .common {
+        display: inline-table;
+    }
+    #listing-page #add-compare-box .add-menu button.list-arrow {
+        padding: 0px 8px;;
+        float: left;
+        font-size: 16px;
+        margin: 4px;
+    }
+    #listing-page #add-compare-box .add-menu a{
+        float: left;
+        margin: 5px;
+        font-size: 11px;
+    }
+    #listing-page #add-compare-box .add-menu button.compare{
+        float: left;
+        font-size: 12px;
+    }
+    #listing-page #add-compare-box .add-box .common .media-right{
+        display: table;
+    }
+    #listing-page #add-compare-box .add-box .common .media-left{
+        display: table;
+    }
+}
+
+@media (max-width : 767px) {
+    #listing-page.scholarship-listing-page{
+        padding: 0 15px;
+    }
+    #listing-page.scholarship-listing-page .right > .common {
+        padding: 0;
+        position: relative;
+    }
+   #listing-page.scholarship-listing-page .right > .common .middle > .m-right >.price.scholar{
+        padding: 9px 3px ;
+        font-size: 12px;
+        text-align: center;
+    }
+    #listing-page.scholarship-listing-page .right > .common .c-left {
+        width: 27%;
+        padding: 5px;
+        margin: 3px 0 15px;
+        border: 1px solid #dedede;
+        background: #fff;
+    }
+    #listing-page.scholarship-listing-page .right > .common .c-right {
+        width: 70%;
+        margin-left: 7px;
+    }
+    #listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left {
+        width: 100%;
+        margin-right: 0;
+    }
+    #listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left > a,
+    #listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left > a:hover {
+        padding: 0 0 8px;
+    }
+    #listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left > a > h2{
+        font-size: 13px;
+        line-height: 18px;
+    }
+    #listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-left .rating-block p {
+        font-size: 10px;
+        padding: 1px 5px;
+        margin-bottom: 5px;
+    }
+    #listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-right {
+        float: left;
+        width: 100%;
+    }
+    #listing-page.scholarship-listing-page .right > .common .c-right > .head > .h-right .checkbox {
+        font-size: 11px;
+        line-height: 16px;
+        margin: 3px 0;
+    }
+    #listing-page.scholarship-listing-page .right > .common .h-top{
+        background-color: #fbfbfb;
+        display: block;
+        width: 100%;
+        float: left;
+        padding: 19px 19px 5px;
+    }
+    #listing-page.scholarship-listing-page .right > .common .middle{
+        width: 100%;
+        margin-left: 0;
+        padding: 15px 19px 19px;
+    }
+    #listing-page.scholarship-listing-page .right > .common .middle > .m-left {
+        width: 100%;
+        margin: 0;
+        padding-bottom: 22px;
+    }
+    #listing-page.scholarship-listing-page .right > .common .middle > .m-left > .common {
+        width: 100%;
+        margin: 0 0 12px;
+    }
+    #listing-page.scholarship-listing-page .right > .common .middle > .m-left > .common:last-child {
+       margin: 0;
+    }
+    #listing-page.scholarship-listing-page .right > .common .middle > .m-right {
+        width: 100%;
+    }
+    #listing-page.scholarship-listing-page .right > .common .middle > .m-right > .btn {
+        height: 38px;
+        font-size: 13px;
+        margin: 0;
+        float: left;
+        display: block;
+        padding: 6px 18px;
+        width: 48%;
+        margin-right:2%;
+    }
+    #listing-page.scholarship-listing-page .right > .common .middle >  .m-right >.sch-right {
+        border:0px;
+        font-size: 10px;
+    }
+    #listing-page .right > .ads {
+        margin: 0 0 15px;
+    }
+    #listing-page .right > .foo-add {
+        margin: 0 0 20px;
+    }
+    #listing-page.scholarship-listing-page .right > .common .middle >  .m-right >.sch-right i {
+        padding-right: 8px;
+        font-size: 16px;
+    }
+    #listing-page.scholarship-listing-page .right > .common .middle > .m-left > .common > h6 {
+        font-size: 9px;
+        line-height: 12px;
+        float: left;
+        width: 50%;
+    }
+    #listing-page.scholarship-listing-page .right > .common .middle > .m-left > .common > p {
+        font-size: 11px;
+        line-height: 12px;
+        float: left;
+        width: 50%;
+
+    }
+    #listing-page.scholarship-listing-page .right > .common .c-right > .head {
+        margin: 0;
+    }
+    #listing-page .right > .head > .sort > a {
+        padding: 0 4px;
+    }
+    #listing-page.scholarship-listing-page .right > .common > img.featured {
+        margin: 0;
+        position: absolute;
+        right: 0;
+    }
+
+    #listing-page #view-all-1 .modal-content .cont-body .media-left {
+        width: 100%;
+        float: left;
+    }
+    #listing-page #view-all-1 .modal-content .cont-body .media-right{
+        width: 100%;
+        padding: 0;
+    }
+
+    /*add-compare starts*/
+    #listing-page .add-compare-modal .form-group {
+        width: 100%;
+    }
+    #listing-page .add-compare-modal p{
+        width: 100%;
+        margin: 3px 0;
+        font-size: 13px;
+    }
+    #listing-page #add-compare-box{
+        left: 0;
+        width: 100%;
+    }
+    #listing-page #add-compare-box .add-menu{
+        float: left;
+        text-align: inherit;
+    }
+    #listing-page #add-compare-box .add-box{
+        display: flex;
+        overflow: overlay;
+        background: transparent;
+    }
+    #listing-page #add-compare-box .table-responsive {
+        border: 0px;
+    }
+    #listing-page #add-compare-box .add-box .common {
+        display: inline-table;
+        border: 0px;
+        height: 77px;
+        background: #fff;
+    }
+    #listing-page #add-compare-box .add-box .common .media-right h6 {
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+    #listing-page #add-compare-box .add-box .common .media-right {
+        padding: 13px 9px;
+    }
+    #listing-page #add-compare-box .add-box .common .media-right p {
+        font-size: 13px;
+    }
+    #listing-page #add-compare-box .add-menu button.list-arrow {
+        padding: 0px 8px;;
+        float: right;
+        font-size: 16px;
+        margin: 4px;
+    }
+    #listing-page .add-compare-modal .modal-dialog {
+        width: 290px;
+    }
+    #listing-page .add-compare-modal .modal-content .modal-header {
+        padding: 12px 12px 12px 20px;
+    }
+    #listing-page .add-compare-modal .modal-content .modal-body {
+        padding: 0px 15px;
+    }
+    #listing-page .add-compare-modal .modal-content .modal-header .close {
+        margin-top: 1px;
+    }
+    #listing-page .add-compare-modal .modal-content .modal-header h4.modal-title {
+        font-size: 15px;
+    }
+    #listing-page #add-compare-box .add-menu a{
+        float: left;
+        margin: 9px 5px 5px;
+        font-size: 11px;
+    }
+    #listing-page #add-compare-box .add-menu button.compare{
+        float: right;
+        font-size: 12px;
+        height: 28px;
+        padding: 2px 24px;
+        border-radius: 1px;
+        margin: 2px 4px;
+    }
+    #listing-page #add-compare-box .add-box .common .media-right{
+        display: table;
+    }
+    #listing-page #add-compare-box .add-box .common .media-left{
+        display: table;
+    }
+    #blog.top-block {
+        z-index: 111;
+    }
+    .ui-widget-content {
+        z-index: 4444!important;
+        width: 258px !important;
+    }
+    /*13-10 changes*/
+    .model-scroll-all .modal-dialog {
+        width: 290px;
+    }
+    #listing-page .model-scroll-all .modal-content .modal-header  {
+        padding: 8px 10px 8px 18px;
+    }
+    #listing-page .model-scroll-all .modal-content .modal-header .modal-title {
+        font-size: 14px;
+    }
+    #listing-page .model-scroll-all .modal-content .modal-header .close {
+        font-size: 15px;
+    }
+    #listing-page .model-scroll-all .modal-content .cont-body {
+        padding: 10px 2px;
+    }
+    #listing-page .model-scroll-all .modal-content button.request {
+        margin: 0px 0 0;
+        width: 74px;
+        font-size: 11px;
+        padding: 1px 12px;
+        height: 26px;
+    }
+    #listing-page .model-scroll-all .modal-content button.request.clearButton {
+        background-color: #fff;
+        color: #afafaf;
+        width: 68px;
+        font-size: 10px;
+        float: none;
+    }
+    #listing-page .model-scroll-all .left > .model > .common .checkbox .cr {
+        width: 14px !important;
+        height: 14px !important;
+    }
+}
+/*media query ends*/
+/*scholarship listing page css ends
+
+/*Faq Section Starts*/
+#listing-page .faq{
+    float: left;
+    width:  100%;
+    padding: 30px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 1px 1px 5px rgba(168,168,168,.3);
+    -moz-box-shadow: 1px 1px 5px rgba(168,168,168,.3);
+    box-shadow: 1px 1px 5px rgba(168,168,168,.3);
+}
+#listing-page .faq h1{
+    font-size: 24px;
+    font-family: "robotolight", sans-serif;
+    margin: 0 0px 30px;
+}
+#listing-page .faq .panel-group {
+    margin-bottom: 0;
+}
+#listing-page .faq .panel-default {
+    border: none;
+    box-shadow: none;
+}
+#listing-page .faq .panel-group .panel+.panel{
+    margin-top: 1px;
+}
+#listing-page .faq .panel-default>.panel-heading{
+    background-color: #fbfbfb;
+    padding: 13px 20px;
+    border: 1px solid transparent;
+    border-color: rgba(0, 1, 1, 0.05);
+    border-radius: 1px;
+    cursor: pointer;
+}
+#listing-page .faq .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border: none;
+    background-color: #fbfbfb;
+    padding: 28px 30px;
+    margin-bottom: 3px;
+}
+#listing-page .faq .panel-title{
+    font-size: 17px;
+    font-family: "robotoregular", sans-serif;
+    color: #000000;
+}
+#listing-page .faq .panel-default>.panel-heading+.panel-collapse>.panel-body p{
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 25px;
+}
+#listing-page .faq .panel-default>.panel-heading+.panel-collapse>.panel-body p:last-child{
+    margin-bottom: 0;
+}
+#listing-page .faq .panel-default>.panel-heading>.panel-title>span>.plus-minus {
+    float: right;
+    color: #01a0c1;
+    font-size: 14px;
+    padding: 0 4px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+@media (min-width : 768px) and (max-width : 991px) {
+    #listing-page .faq{
+        padding: 20px 15px;
+        margin: 0 0 15px;
+    }
+    #listing-page .faq h1 {
+        margin: 0 0 20px;
+    }
+    #listing-page .faq .panel-default>.panel-heading+.panel-collapse>.panel-body{
+        padding: 20px;
+    }
+}
+
+@media (max-width : 767px) {
+    #listing-page .faq{
+        padding: 20px 15px;
+        margin: 0 0 15px;
+    }
+    #listing-page .faq h1 {
+        font-size: 20px;
+        margin: 0 0 20px;
+    }
+    #listing-page .faq .panel-default>.panel-heading+.panel-collapse>.panel-body{
+        padding: 13px;
+    }
+    #listing-page .faq .panel-default>.panel-heading{
+        padding: 10px 6px;
+    }
+    #listing-page .faq .panel-title{
+        font-size: 13px;
+    }
+    #listing-page .faq .panel-default>.panel-heading+.panel-collapse>.panel-body p {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+}
+/*Faq Section ends*/

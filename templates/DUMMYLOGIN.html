@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filtered Aid</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Filtered Aid</h1>
+    {% if recommendations %}
+    <ul>
+        {% for recommendation in recommendations %}
+        <li>{{ recommendation.finaidname }} - Similarity: {{ recommendation.similarity }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No recommendations found.</p>
+    {% endif %}
+</body>
+</html>

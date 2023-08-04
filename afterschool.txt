@@ -1,0 +1,54 @@
+https://afterschool.my/scholarship
+
+<div class="common">
+                                                        <div class="h-top">
+                             <div class="c-left">
+                               
+                                <img src="https://1120688276.rsc.cdn77.org/admin/uploads/images/scholarshipIcon/1317747822HEART-Logo-1-banner_(1).png" class="img-responsive center-block" alt="logo">
+                               
+                            </div>
+                            <div class="c-right">
+                              <div class="head">
+                               <div class="h-left">
+                                <a target="blank" href="https://afterschool.my/scholarship/yayasan-lim-yee-hoh-bursaries"><h2>Yayasan Lim Yee Hoh Bursaries</h2></a>              
+                                <div class="rating-block ">
+                                 <p class="pull-left hidden-xs">
+                                  Malaysia 
+                               </p>
+                               <p class="pull-left deadline">Deadline: <b>Dec 31 2023</b></p>
+                             </div>
+                           </div>
+                           <div class="h-right hidden-xs">
+                            <div class="checkbox">
+                             <label>
+                                                             <input class="add-shortlist" data-scholarshipid="76803" data-shortlistfor="scholarship" data-shortlistaction="add" type="checkbox" name="o3" value=""> 
+                              <span class="cr">
+                               <i class="cr-icon fa fa-check"></i></span> Add to Shortlist
+                             </label>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+
+                   <div class="middle">
+                     <div class="m-left">
+                      <div class="common">
+                       <h6>Amount</h6>
+                       <p>Accommodation                     </p>
+                   </div>
+                   <div class="common">
+                     <h6>Study Level</h6>
+                     <p>
+                    <!-- ALL --> 
+                       Degree,Diploma,Master,ODL,PhD,Pre University,Professional Qualification                     </p>
+                   </div>
+                   <!-- <div class="common"><h6>Nationality</h6><p>Malaysian</p></div> -->
+                 </div>
+                 <div class="m-right">
+                                                            <a href="https://afterschool.my/scholarship/yayasan-lim-yee-hoh-bursaries" class="btn price scholar">Scholarship Info</a>
+                                                              <!-- <button class="btn price contactreqInfo" data-toggle="modal" data-target=".requestInfoPopup" data-scholarshipId="76803" data-collegeIcon="1317747822HEART-Logo-1-banner_(1).png" data-collegeName="Yayasan Lim Yee Hoh Bursaries">Get Contact Details</button> -->
+                                                  <button class="btn sch-right visible-xs add-shortlist " data-scholarshipid="76803" data-shortlistfor="scholarship" data-shortlistaction="add" type="checkbox" name="o3" value=""><i aria-hidden="true" class="shortlistBtn-76803 fa fa-heart-o"></i>ADD TO SHORTLIST</button>
+              </div>
+            </div>
+          </div>

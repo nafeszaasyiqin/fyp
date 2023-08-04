@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FinBuddy</title>
+    <link href="{{ url_for('static', path='/css/bootstrap.css') }}" rel="stylesheet">
+    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Favicons -->
+  <link href="static/images/icon.jpg" rel="icon">
+
+  <link href="../static/img/hehe.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+ <link href="static/css/style2.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+ <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+ <div class="container d-flex align-items-center justify-content-lg-between">
+
+  <!-- class="logo me-auto me-lg-0"><a href="index.html">Gp<span>.</span></a></h1> -->
+       <a href="/" class="logo me-auto me-lg-0"><img src="static/img/rw.png" alt="" class="img-fluid"></a>
+
+   <nav id="navbar" class="navbar order-last order-lg-0">
+  <ul>
+    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+    <!-- <li><a class="nav-link scrollto" href="#about">About</a></li> -->
+    <li>
+      <div class="color">
+        <a class="nav-link scrollto" href="/signin">Sign In</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  .color a {
+
+    border: 1px solid black;
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: #f2f2f2;
+    transition: background-color 0.3s ease;
+  }
+
+  .color a:hover {
+    background-color: #3a00b6;
+    color: #ffffff;
+  }
+</style>
+
+
+
+  </header><!-- End Header -->
+<!-- Write your comments here -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row justify-content-left" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8">
+          <h1>Student Financial Aid Recommendation<span>.</span></h1>
+          <h2>Helping you to find the most suitable financial aid for your study!</h2>
+        </div>
+      </div>
+
+<div class="left" data-aos="fade-up">
+
+
+
+
+ <a href="/dashboard1" class="get-started-btn scrollto">Try FinBuddy ⭧</a>
+
+     </div>
+
+<img src="static/images/HP.png" alt="Nature" class="res" data-aos="fade-up"  onmouseover="speakText('HI, welcome to UITM FinBuddy! Lets get STARTED!')" onmouseout="stopSpeaking()">
+
+ </div>
+
+<script>
+function speakText(text) {
+  const utterance = new SpeechSynthesisUtterance(text);
+  const voices = speechSynthesis.getVoices();
+
+  // Filter voices to find a female voice
+  const femaleVoice = voices.find(voice => voice.name.includes('female') && voice.lang.startsWith('en'));
+
+  if (femaleVoice) {
+    utterance.voice = femaleVoice;
+  } else {
+    console.log('No female voice available.');
+  }
+
+  speechSynthesis.speak(utterance);
+}
+
+function stopSpeaking() {
+  speechSynthesis.cancel();
+}
+
+
+</script>
+
+
+  </section><!-- End Hero -->
+
+ <section id="hero" class="d-flex align-items-center justify-content-center">
+<div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+
+
+          <h4>Why we are better than others?<span></span></h4>
+
+
+
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+              <img src="https://th.bing.com/th/id/R.0d7e80f6a4c9d33f17a5a9b6a1b13c8e?rik=2HXnKp66q8%2bT4Q&riu=http%3a%2f%2fpluspng.com%2fimg-png%2ftask-png--1600.png&ehk=X%2bPx7xG%2bptti9WOzgCA3S0nyMQha0ZqxUD0hEELijTs%3d&risl=&pid=ImgRaw&r=0" style="max-width: 75px">
+
+            <h3><a href="">Convenient searching tool</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <img src="https://th.bing.com/th/id/R.f615b7ec7f87762941b7f28edd9f8eef?rik=x40Y4ka2BahuNQ&riu=http%3a%2f%2fwww.cincoland.com%2fwp-content%2fuploads%2f2016%2f11%2fcinco-service-time.png&ehk=DGk%2fZfHRMI7E%2b967wCYRs66kfl2SNHoZ%2fRZAj0Qkn5o%3d&risl=&pid=ImgRaw&r=0" style="max-width: 75px">
+            <h3><a href="">Time-saver</a></h3>
+          </div>
+        </div>
+
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <img src="https://childrightsconnect.org/wp-content/uploads/2021/03/sdg-logo.png" style="max-width: 75px">
+            <h3><a href="https://sdgs.un.org/goals/goal4">Support SDG Goals</a></h3>
+          </div>
+        </div>
+    <!--
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-paint-brush-line"></i>
+            <h3><a href="">Magni Dolores</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-database-2-line"></i>
+            <h3><a href="">Nemos Enimade</a></h3>
+          </div>
+        </div> -->
+      </div>
+
+ </section>
+
+ <!-- ======= About Section ======= -->
+
+
+
+
+
+
+<!--
+<div class="container w-50 ">
+ <h1>Student Financial Aid Recommendation System</h1>
+ <hr class="text-primary">
+ <p>Welcome to Student Financial Aid Recommendation System, this system helping you finding the suitable financial aids for your study!
+     Click <a href="http://127.0.0.1:8000/list_fish">here</a>
+ </p>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="static/images/uitm.jpg" class="d-block w-20" alt="uitm" height="350" width="700">
+    </div>
+    <div class="carousel-item">
+      <img src="static/images/topi.jpg" class="d-block w-20" alt="topi" height="350" width="700">
+    </div>
+    <div class="carousel-item">
+      <img src="static/images/puzzle.jpg" class="d-block w-20" alt="puzzle" height="350" width="700">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+    </div>
+ </div>
+-->
+ <!-- ======= Get Started Section ======= -->
+
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+</html>

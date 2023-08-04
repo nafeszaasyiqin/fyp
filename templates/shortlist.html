@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>My Shortlist FinBuddy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+   <!-- Favicons -->
+  <link href="static/images/icon.jpg" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="static/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Mar 09 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .shortlist-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .recommendation-item {
+            background-color: #f5f5f5;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .recommendation-item:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+    <script>
+        // JavaScript for handling click events
+        function redirectToRecommendation(url) {
+            window.location.href = url;
+        }
+    </script>
+
+
+</head>
+
+
+
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center ">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="/" class="logo d-flex align-items-center">
+        <img src="static/img/rw.png" alt="">
+
+      </a>
+
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+       <li class="nav-item dropdown pe-3">
+  {% if student %}
+    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+      <img src="static/images/{{ student.stu_image }}" alt="Profile" class="rounded-circle">
+      <span class="d-none d-md-block dropdown-toggle ps-2">{{ student.stu_name }}</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+      <li class="dropdown-header">
+        <h6>{{ student.stu_name }}</h6>
+        <span>{{ student.stu_id }}</span>
+      </li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+    </ul>
+  {% else %}
+    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+      <img src="static/images/guest_profile.jpg" alt="Guest" class="rounded-circle">
+      <span class="d-none d-md-block dropdown-toggle ps-2">Guest</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+      <li class="dropdown-header">
+        <h6>You are in as guest</h6>
+
+      </li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+    </ul>
+  {% endif %}
+</li>
+
+
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/guide" >
+          <i class="bi bi-grid"></i>
+          <span>Guideline</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+
+
+  <!-- Other navigation items -->
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="/dashboard1" >
+      <i class="bi bi-grid"></i>
+      <span>Recommend Me!</span>
+    </a>
+  </li>
+
+
+
+       <li class="nav-item">
+         <a class="nav-link " href="/shortlist" onclick="scrollToSection('shortlist')">
+          <i class="bi bi-grid"></i>
+          <span>My Shortlist</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+
+
+<!--
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="charts-chartjs.html">
+              <i class="bi bi-circle"></i><span>Chart.js</span>
+            </a>
+          </li>
+          <li>
+            <a href="charts-apexcharts.html">
+              <i class="bi bi-circle"></i><span>ApexCharts</span>
+            </a>
+          </li>
+          <li>
+            <a href="charts-echarts.html">
+              <i class="bi bi-circle"></i><span>ECharts</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Charts Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="icons-bootstrap.html">
+              <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-remix.html">
+              <i class="bi bi-circle"></i><span>Remix Icons</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>Boxicons</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Icons Nav
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="users-profile.html">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+
+
+
+
+      </li><!-- End Profile Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-faq.html">
+          <i class="bi bi-question-circle"></i>
+          <span>F.A.Q</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-contact.html">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li><!-- End Contact Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-register.html">
+          <i class="bi bi-card-list"></i>
+          <span>Register</span>
+        </a>
+      </li><!-- End Register Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-login.html">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Login</span>
+        </a>
+      </li><!-- End Login Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-error-404.html">
+          <i class="bi bi-dash-circle"></i>
+          <span>Error 404</span>
+        </a>
+      </li> -->
+
+        <li class="nav-item">
+    <a class="nav-link collapsed" href="#" onclick="showLogoutModal()">
+    <i class="bi bi-file-earmark"></i>
+    <span>Log Out</span>
+  </a>
+</li><!-- End Blank Page Nav -->
+
+        <style>
+    /* Additional styles for the pop-up message */
+    .logout-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+        align-items: center;
+    justify-content: center;
+    }
+    .logout-modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+         text-align: center;
+    }
+
+     .logout-modal-content button {
+    background-color: #01026b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  </style>
+
+<div class="logout-modal" id="logoutModal">
+    <div class="logout-modal-content">
+      <h2>Logout Confirmation</h2>
+      <p>Are you sure you want to logout?</p>
+      <button onclick="logout()">Logout</button>
+      <button onclick="hideLogoutModal()">Cancel</button>
+    </div>
+  </div>
+
+ <script>
+    function showLogoutModal() {
+      document.getElementById("logoutModal").style.display = "block";
+    }
+
+    function hideLogoutModal() {
+      document.getElementById("logoutModal").style.display = "none";
+    }
+
+    function logout() {
+      // Perform logout operation here
+      // Redirect to the desired page after logout
+      window.location.href = "/logout";
+    }
+  </script>
+
+
+
+</ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>My Shortlist</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Add to Shortlist</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+
+<!-- HEREEEEEEE-->
+
+
+ <link href="static/css/style3.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+
+
+    <style>
+
+ .recommendation-box {
+    background-color: #f5f5f5;
+
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.recommendation-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.box-header h2 {
+    font-size: 20px;
+    color: #000162;
+  font-weight: bold;
+}
+
+.box-header .date {
+    font-size: 14px;
+    color: #777;
+}
+
+.box-content p {
+    color: #555;
+}
+
+.box-content .link {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.box-content .link:hover {
+    text-decoration: underline;
+    color: #23527c;
+}
+.label-flag {
+  display: inline-block;
+  background-color: #e5f2ff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.date-label, .time-label {
+  margin-right: 5px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.datetime-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+  color: #0a58ca;
+}
+
+.date, .time {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+
+      </style>
+  </head>
+  <body>
+
+  {% if message %}
+    <script>
+      var confirmRedirect = confirm("{{ message }}. Do you want to continue?");
+      if (!confirmRedirect) {
+        // Stay on the current page
+      } else {
+        window.location.href = "/signin";  // Redirect to the /signin page
+      }
+    </script>
+  {% endif %}
+
+<!--
+<section class="ftco-section">
+    <div class="shortlist-container">
+        <ul>
+            {% for recommendation in recommendations %}
+            <li class="recommendation-box">
+                <a href="#" class="delete-link" onclick="deleteRecommendation(event, {{ loop.index0 }})">&#x2716;</a>
+                <div class="box-header">
+                    <h2>{{ recommendation.finaid_name }}</h2>
+                    <div class="datetime-container">
+                        <span class="date">{{ recommendation.date }}</span>
+                        {% if recommendation.time %}
+                        <span class="time">{{ recommendation.time }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="box-content">
+                    <p>{{ recommendation.description }}</p>
+                    <a href="{{ recommendation.finaid_link }}" class="link">Visit Website</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+<script>
+   function deleteRecommendation(event, recommendationIndex) {
+    event.preventDefault();
+
+    if (confirm("Are you sure you want to delete this recommendation?")) {
+        fetch(`/delete-recommendation/${recommendationIndex}`, {
+            method: "DELETE"
+        })
+        .then(response => {
+            if (response.ok) {
+                // Reload the page or update the UI as needed
+                location.reload();
+            } else {
+                throw new Error("Failed to delete recommendation");
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            alert("Failed to delete recommendation");
+        });
+    }
+}
+</script> -->
+
+ <section class="ftco-section">
+    <div class="shortlist-container">
+        <ul>
+            {% for recommendation in recommendations %}
+            <li class="recommendation-box">
+                <div class="delete-container">
+                    <a href="#" class="delete-link" onclick="deleteRecommendation(event, {{ loop.index0 }})">
+                        <span class="cross-icon">&#x2716;</span>
+                        <span class="delete-text">Delete Record</span>
+                    </a>
+                </div>
+                <div class="box-header">
+                    <h2>{{ recommendation.finaid_name }}</h2>
+                    <div class="datetime-container">
+                        <span class="date">{{ recommendation.date }}</span>
+                        {% if recommendation.time %}
+                        <span class="time">{{ recommendation.time }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="box-content">
+                    <p>{{ recommendation.description }}</p>
+                    <a href="{{ recommendation.finaid_link }}" class="link">Visit Website</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+
+
+
+<style>
+    .delete-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .delete-link {
+        display: inline-block;
+        position: relative;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .delete-link:hover {
+        color: #f00;
+    }
+
+    .cross-icon {
+        font-size: 18px;
+    }
+
+    .delete-text {
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        background-color: #f00;
+        color: #fff;
+        padding: 4px 8px;
+        font-size: 12px;
+        border-radius: 4px;
+        transition: opacity 0.3s;
+    }
+
+    .delete-container:hover .delete-text {
+        opacity: 1;
+    }
+</style>
+
+
+
+
+<script>
+   function deleteRecommendation(event, recommendationIndex) {
+    event.preventDefault();
+
+    if (confirm("Are you sure you want to delete this recommendation?")) {
+        fetch(`/delete-recommendation/${recommendationIndex}`, {
+            method: "DELETE"
+        })
+        .then(response => {
+            if (response.ok) {
+                // Reload the page or update the UI as needed
+                location.reload();
+            } else {
+                throw new Error("Failed to delete recommendation");
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            alert("Failed to delete recommendation");
+        });
+    }
+}
+</script>
+
+
+
+
+    <script src="static/js/js/jquery.min.js"></script>
+    <script src="static/js/js/popper.js"></script>
+    <script src="static/js/js/bootstrap.min.js"></script>
+    <script src="static/js/js/main.js"></script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </main><!-- End #main -->
+
+<section>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Nafeszasyiqin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">Nafeszasyiqin</a>
+    </div>
+  </footer><!-- End Footer -->
+  </section>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/chart.js/chart.umd.js"></script>
+  <script src="static/vendor/echarts/echarts.min.js"></script>
+  <script src="static/vendor/quill/quill.min.js"></script>
+  <script src="static/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="static/vendor/tinymce/tinymce.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main2.js"></script>
+
+</body>
+
+</html>

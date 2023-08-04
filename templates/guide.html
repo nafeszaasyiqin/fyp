@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Guideline FinBuddy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+   <!-- Favicons -->
+  <link href="static/images/icon.jpg" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="static/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Mar 09 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center ">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="/" class="logo d-flex align-items-center">
+        <img src="static/img/rw.png" alt="">
+
+      </a>
+
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+
+
+     <nav class="header-nav ms-auto">
+    <ul class="d-flex align-items-center">
+
+    <li class="nav-item dropdown pe-3">
+  {% if student %}
+    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+      <img src="static/images/{{ student.stu_image }}" alt="Profile" class="rounded-circle">
+      <span class="d-none d-md-block dropdown-toggle ps-2">{{ student.stu_name }}</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+      <li class="dropdown-header">
+        <h6>{{ student.stu_name }}</h6>
+        <span>{{ student.stu_id }}</span>
+      </li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+    </ul>
+  {% else %}
+    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+      <img src="static/images/guest_profile.jpg" alt="Guest" class="rounded-circle">
+      <span class="d-none d-md-block dropdown-toggle ps-2">Guest</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+      <li class="dropdown-header">
+        <h6>You are in as guest</h6>
+
+      </li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+    </ul>
+  {% endif %}
+</li>
+
+
+
+
+
+
+    </ul>
+  </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="/guide" onclick="scrollToSection('guideline')">
+          <i class="bi bi-grid"></i>
+          <span>Guideline</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+
+
+  <!-- Other navigation items -->
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="/dashboard1" >
+      <i class="bi bi-grid"></i>
+      <span>Recommend Me!</span>
+    </a>
+  </li>
+
+
+
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="/shortlist">
+          <i class="bi bi-grid"></i>
+          <span>My Shortlist</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+
+       <li class="nav-item">
+    <a class="nav-link collapsed" href="#" onclick="showLogoutModal()">
+    <i class="bi bi-file-earmark"></i>
+    <span>Log Out</span>
+  </a>
+</li><!-- End Blank Page Nav -->
+
+        <style>
+    /* Additional styles for the pop-up message */
+    .logout-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+        align-items: center;
+    justify-content: center;
+    }
+    .logout-modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+         text-align: center;
+    }
+
+     .logout-modal-content button {
+    background-color: #01026b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  </style>
+
+<div class="logout-modal" id="logoutModal">
+    <div class="logout-modal-content">
+      <h2>Logout Confirmation</h2>
+      <p>Are you sure you want to logout?</p>
+      <button onclick="logout()">Logout</button>
+      <button onclick="hideLogoutModal()">Cancel</button>
+    </div>
+  </div>
+
+ <script>
+    function showLogoutModal() {
+      document.getElementById("logoutModal").style.display = "block";
+    }
+
+    function hideLogoutModal() {
+      document.getElementById("logoutModal").style.display = "none";
+    }
+
+    function logout() {
+      // Perform logout operation here
+      // Redirect to the desired page after logout
+      window.location.href = "/logout";
+    }
+  </script>
+
+      <div id="starRating" style="display: none;">
+  <span class="star" onclick="setRating(1)"></span>
+  <span class="star" onclick="setRating(2)"></span>
+  <span class="star" onclick="setRating(3)"></span>
+  <span class="star" onclick="setRating(4)"></span>
+  <span class="star" onclick="setRating(5)"></span>
+</div>
+
+
+      <script>
+  var selectedRating = 0;
+
+  function setRating(rating) {
+    // Set the selected rating
+    selectedRating = rating;
+
+    // Update the star rating UI
+    var stars = document.getElementsByClassName('star');
+    for (var i = 0; i < stars.length; i++) {
+      if (i < rating) {
+        stars[i].classList.add('selected');
+      } else {
+        stars[i].classList.remove('selected');
+      }
+    }
+  }
+
+  function logout() {
+    // Show the star rating container
+    document.getElementById('starRating').style.display = 'block';
+
+    // Send the selected rating to the server
+    fetch('/save-rating', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ rating: selectedRating })
+    })
+    .then(response => {
+      // Handle the response from the server if needed
+      // Redirect to the desired page after logout
+      window.location.href = "/logout";
+    })
+    .catch(error => {
+      // Handle any errors that occurred during the request
+      console.error('Error:', error);
+    });
+  }
+</script>
+
+<style>
+  /* CSS for the star rating */
+  #starRating {
+    display: inline-block;
+  }
+
+  .star {
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+    color: gray;
+  }
+
+  .star.selected {
+    color: gold;
+  }
+</style>
+
+
+
+
+
+
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Guideline</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+
+<!-- HEREEEEEEE-->
+
+
+ <link href="static/css/style3.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+
+    <style>
+
+
+    h1 {
+      color: #8c0000;
+      text-align: center;
+      margin-bottom: 40px;
+        font-weight: bolder;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .overview {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .info-box {
+      flex-basis: 48%;
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #ffffff;
+      animation: scaleIn 0.5s ease-in-out;
+      transition: box-shadow 0.3s;
+    }
+
+    .info-box:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-box h3 {
+      color: #333;
+      margin-top: 0;
+      font-size: 20px;
+        text-align: center;
+    }
+
+     .info-box h10 {
+      font-size: 15px;
+      color: darkblue;
+      margin: 0;
+      margin-bottom: 10px;
+
+    }
+
+    .info-box p {
+      margin-top: 10px;
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .start-button {
+      background-color: #000c6e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      animation: slideIn 0.5s ease-in-out;
+    }
+
+    .start-button:hover {
+      background-color: #00c208;
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scale(0);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+
+
+  </head>
+
+
+
+
+
+  <body>
+
+<section class="ftco-section">
+
+    <div class="container">
+    <h1>FinBuddy</h1>
+ <div class="info-box">
+      <h10>FinBuddy is a recommendation system that allows you to explore various financial aid opportunities
+        for your studies. By inputting specific criteria, such as your study level, family income, major of study,
+        field of study, identity, state, and CGPA. FinAidDiscover will provide tailored recommendations for available
+        financial aid options that match you.</h10>
+    </div>
+
+        <div class="overview">
+      <div class="info-box">
+        <h3>Study Level</h3>
+        <p>Select your study level from the options provided, including Foundation, Diploma, Degree, Master, or PhD.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Family Income</h3>
+        <p>Select your family income range to determine your eligibility for financial aid. Choose from B40 (Less than RM4,850), M40 (RM4,850 - RM10,959), or T20 (RM10,960 and above).</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Major of Study</h3>
+        <p>Choose your major of study from available options such as Science & Technology, Social Science & Humanities, or Business & Management.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Field of Study</h3>
+        <p>Based on your chosen major of study, select the specific field of study that aligns with your interests and aspirations.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Identity</h3>
+        <p>Specify your identity, whether it's All, OKU (People with Disabilities), or Orang Asli (Indigenous People), to explore relevant financial aid options.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>State</h3>
+        <p>Select your state of residence to find financial aid opportunities specific to your location.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>CGPA</h3>
+        <p>Enter your Cumulative Grade Point Average (CGPA) within the range of 0 to 4 to determine eligibility for certain financial aid programs.</p>
+      </div>
+    </div>
+
+    <div class="button-container">
+    <a href="/dashboard1">
+        <button class="start-button">Get Started</button>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Interactive button behavior
+    const startButton = document.querySelector('.start-button');
+    startButton.addEventListener('click', function() {
+      // Add your code to proceed to the next page or perform desired actions
+      alert('You clicked "Get Started"!'); // Placeholder alert for demonstration
+    });
+  </script>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="static/js/js/jquery.min.js"></script>
+    <script src="static/js/js/popper.js"></script>
+    <script src="static/js/js/bootstrap.min.js"></script>
+    <script src="static/js/js/main.js"></script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </main><!-- End #main -->
+
+<section>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Nafeszasyiqin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">Nafeszasyiqin</a>
+    </div>
+  </footer><!-- End Footer -->
+  </section>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/chart.js/chart.umd.js"></script>
+  <script src="static/vendor/echarts/echarts.min.js"></script>
+  <script src="static/vendor/quill/quill.min.js"></script>
+  <script src="static/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="static/vendor/tinymce/tinymce.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main2.js"></script>
+
+</body>
+
+</html>

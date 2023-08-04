@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<head>
+
+
+
+
+
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard FinBuddy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+   <!-- Favicons -->
+  <link href="static/images/icon.jpg" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="static/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Mar 09 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <header id="header" class="header fixed-top d-flex align-items-center">
+  <div class="d-flex align-items-center justify-content-between">
+    <a href="/" class="logo d-flex align-items-center">
+      <img src="static/img/rw.png" alt="">
+    </a>
+    <i class="bi bi-list toggle-sidebar-btn"></i>
+  </div><!-- End Logo -->
+
+
+  <nav class="header-nav ms-auto">
+    <ul class="d-flex align-items-center">
+
+      <li class="nav-item dropdown pe-3">
+  {% if student %}
+    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+      <img src="static/images/{{ student.stu_image }}" alt="Profile" class="rounded-circle">
+      <span class="d-none d-md-block dropdown-toggle ps-2">{{ student.stu_name }}</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+      <li class="dropdown-header">
+        <h6>{{ student.stu_name }}</h6>
+        <span>{{ student.stu_id }}</span>
+      </li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+    </ul>
+  {% else %}
+    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+      <img src="static/images/guest_profile.jpg" alt="Guest" class="rounded-circle">
+      <span class="d-none d-md-block dropdown-toggle ps-2">Guest</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+      <li class="dropdown-header">
+        <h6>You are in as guest</h6>
+
+      </li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+    </ul>
+  {% endif %}
+</li>
+
+        </ul><!-- End Profile Dropdown Items -->
+      </li><!-- End Profile Nav -->
+
+    </ul>
+  </nav><!-- End Icons Navigation -->
+</header><!-- End Header -->
+
+
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/guide">
+          <i class="bi bi-grid"></i>
+          <span>Guideline</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+
+
+  <!-- Other navigation items -->
+  <li class="nav-item">
+    <a class="nav-link" href="/dashboard1" onclick="scrollToSection('recommend')">
+      <i class="bi bi-grid"></i>
+      <span>Recommend Me!</span>
+    </a>
+  </li>
+
+
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="/shortlist">
+          <i class="bi bi-grid"></i>
+          <span>My Shortlist</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+
+
+
+
+<!--
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="charts-chartjs.html">
+              <i class="bi bi-circle"></i><span>Chart.js</span>
+            </a>
+          </li>
+          <li>
+            <a href="charts-apexcharts.html">
+              <i class="bi bi-circle"></i><span>ApexCharts</span>
+            </a>
+          </li>
+          <li>
+            <a href="charts-echarts.html">
+              <i class="bi bi-circle"></i><span>ECharts</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Charts Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="icons-bootstrap.html">
+              <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-remix.html">
+              <i class="bi bi-circle"></i><span>Remix Icons</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>Boxicons</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Icons Nav
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="users-profile.html">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+
+
+
+
+      </li><!-- End Profile Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-faq.html">
+          <i class="bi bi-question-circle"></i>
+          <span>F.A.Q</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-contact.html">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li><!-- End Contact Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-register.html">
+          <i class="bi bi-card-list"></i>
+          <span>Register</span>
+        </a>
+      </li><!-- End Register Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-login.html">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Login</span>
+        </a>
+      </li><!-- End Login Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-error-404.html">
+          <i class="bi bi-dash-circle"></i>
+          <span>Error 404</span>
+        </a>
+      </li><!-- End Error 404 Page Nav
+    -->
+    <li class="nav-item">
+    <a class="nav-link collapsed" href="#" onclick="showLogoutModal()">
+    <i class="bi bi-file-earmark"></i>
+    <span>Log Out</span>
+  </a>
+</li><!-- End Blank Page Nav -->
+
+        <style>
+    /* Additional styles for the pop-up message */
+    .logout-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+        align-items: center;
+    justify-content: center;
+    }
+    .logout-modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+         text-align: center;
+    }
+
+     .logout-modal-content button {
+    background-color: #01026b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  </style>
+
+<div class="logout-modal" id="logoutModal">
+    <div class="logout-modal-content">
+      <h2>Logout Confirmation</h2>
+      <p>Are you sure you want to logout?</p>
+      <button onclick="logout()">Logout</button>
+      <button onclick="hideLogoutModal()">Cancel</button>
+    </div>
+  </div>
+
+ <script>
+    function showLogoutModal() {
+      document.getElementById("logoutModal").style.display = "block";
+    }
+
+    function hideLogoutModal() {
+      document.getElementById("logoutModal").style.display = "none";
+    }
+
+    function logout() {
+      // Perform logout operation here
+      // Redirect to the desired page after logout
+      window.location.href = "/logout";
+    }
+  </script>
+
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+
+<!-- HEREEEEEEE-->
+
+
+ <link href="static/css/style3.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+
+  </head>
+  <body>
+
+
+
+
+		<section class="ftco-section" id="recommend" >
+<div class="container" >
+
+          <div class="row justify-content-center text-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="150" onmouseover="speakText('Are you new to this system???? Just click on Guidelines to discover the easy steps for getting started. ')" onmouseout="stopSpeaking()">
+    <div>
+        <strong1>The simplest way to secure the financial aid for your study!</strong1>
+    </div>
+  <a>Complete the following form to get you financial aid recommendation according to your preference</a>
+
+</div>
+<!--FRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR-->
+
+<script>
+function speakText(text) {
+  const utterance = new SpeechSynthesisUtterance(text);
+  const voices = speechSynthesis.getVoices();
+
+  // Filter voices to find a female voice
+  const femaleVoice = voices.find(voice => voice.name.includes('female') && voice.lang.startsWith('en'));
+
+  if (femaleVoice) {
+    utterance.voice = femaleVoice;
+  } else {
+    console.log('No female voice available.');
+  }
+
+  speechSynthesis.speak(utterance);
+}
+
+function stopSpeaking() {
+  speechSynthesis.cancel();
+}
+
+
+</script>
+
+
+
+
+
+  <section class="ftco-section">
+  <div class="container">
+    <form id="dashboardForm" action="/result" method="POST">
+      <div class="row justify-content-center ">
+        <div class="col-md-auto d-flex justify-content-center" id="studyLevel">
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class=" mr-auto "></i>
+              <span id="selectStudyLevel">Study Level</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item color-1" id="foundation" onclick="selectStudyLevel('Foundation')">Foundation</a>
+              <a class="dropdown-item color-2" id="diploma" onclick="selectStudyLevel('Diploma')">Diploma</a>
+              <a class="dropdown-item color-3" id="degree" onclick="selectStudyLevel('Degree')">Degree</a>
+              <a class="dropdown-item color-4" id="master" onclick="selectStudyLevel('Master')">Master</a>
+              <a class="dropdown-item color-5" id="phd" onclick="selectStudyLevel('PhD')">PhD</a>
+            </div>
+          </div>
+        </div>
+        <input type="hidden" name="study_level" id="studyLevelInput" value="">
+
+        <script>
+          function selectStudyLevel(value) {
+            // Update the selected value in the title
+            document.getElementById('selectStudyLevel').innerText = value;
+            document.getElementById('studyLevelInput').value = value;
+          }
+        </script>
+
+
+        <div class="col-md-auto d-flex justify-content-center" id="familyincome">
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="mr-auto"></i>
+              <span id="selectedFamilyIncome">Family's Income</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item color-1" id="b40" onclick="selectFamilyIncome('B40')">B40: Less than RM4,850</a>
+              <a class="dropdown-item color-2" id="m40" onclick="selectFamilyIncome('M40')">M40: RM4,850 - RM10,9590</a>
+              <a class="dropdown-item color-3" id="t20" onclick="selectFamilyIncome('T20')">T20: RM10,960 and above</a>
+            </div>
+          </div>
+        </div>
+        <input type="hidden" name="family_income" id="familyIncomeInput" value="">
+
+        <script>
+          function selectFamilyIncome(value) {
+            // Update the selected value in the title
+            document.getElementById('selectedFamilyIncome').innerText = value;
+            document.getElementById('familyIncomeInput').value = value;
+          }
+        </script>
+
+
+        <!-- this is major side-->
+<style>
+  .scrollable-dropdown {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  /* Customize the scrollbar */
+  .scrollable-dropdown::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f1f1f1;
+  }
+
+  /* Track */
+  .scrollable-dropdown::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  /* Handle */
+  .scrollable-dropdown::-webkit-scrollbar-thumb {
+    background-color: #2196f3;
+  }
+
+  /* Handle on hover */
+  .scrollable-dropdown::-webkit-scrollbar-thumb:hover {
+    background-color: #000162;
+  }
+
+
+
+
+
+
+
+
+</style>
+
+
+<!-- Rest of the code remains the same -->
+
+
+<div class="col-md-auto d-flex justify-content-center" id="major">
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="mr-auto"></i>
+      <span id="selectmajor">Field of Study</span>
+    </button>
+    <div class="dropdown-menu dropdown-menu-right">
+      <a class="dropdown-item color-1" id="st" onclick="selectmajor('Science & Technology')">Science & Technology</a>
+      <a class="dropdown-item color-2" id="ss" onclick="selectmajor('Social Science & Humanities')">Social Science & Humanities</a>
+      <a class="dropdown-item color-3" id="bm" onclick="selectmajor('Business & Management')">Business & Management</a>
+
+    </div>
+  </div>
+</div>
+
+<div class="col-md-auto d-flex justify-content-center" id="subcategory" style="display: none;">
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="mr-auto"></i>
+      <span id="selectsubcategory">Discipline</span>
+    </button>
+    <div class="dropdown-menu dropdown-menu-right scrollable-dropdown" id="subcategoryDropdown">
+    </div>
+  </div>
+</div>
+
+<input type="hidden" name="major_of_study" id="majorOfStudyInput" value="">
+<input type="hidden" name="subcategory" id="subcategoryInput" value="">
+
+<script>
+
+ const subcategories = {
+  'Science & Technology': ['Civil Engineering', 'Electrical Engineering', 'Medicine', 'Sports Science & Recreation', 'Architecture, Planning & Surveying', 'Computer & Mathematical Sciences', 'Health Sciences', 'Pharmacy', 'Chemical Engineering', 'Dentistry', 'Mechanical Engineering', 'Plantation & Agrotechnology'],
+  'Business & Management': ['Accountancy', 'Business & Management', 'Hotel & Tourism Management'],
+  'Social Science & Humanities': ['Administrative Science & Policy Studies', 'Education', 'Music', 'Art & Design', 'Film, Theater & Animation', 'Communication & Media Studies', 'Law']
+};
+
+
+function selectmajor(value) {
+  // Update the selected value in the title
+  document.getElementById('selectmajor').innerText = value;
+  document.getElementById('majorOfStudyInput').value = value;
+
+  // Clear previously selected subcategory
+  document.getElementById('selectsubcategory').innerText = value === 'All' ? 'All' : 'Field of Study';
+  document.getElementById('subcategoryInput').value = value === 'All' ? 'All' : '';
+
+  // Update subcategory dropdown options
+  const subcategoryDropdown = document.getElementById('subcategoryDropdown');
+  subcategoryDropdown.innerHTML = '';
+
+  if (value === 'All') {
+    const allOption = document.createElement('a');
+    allOption.classList.add('dropdown-item');
+    allOption.textContent = 'All';
+    allOption.addEventListener('click', () => selectsubcategory('All'));
+    subcategoryDropdown.appendChild(allOption);
+  } else if (value in subcategories) {
+    const subcategoryList = subcategories[value];
+    subcategoryList.forEach((subcategory) => {
+      const subcategoryOption = document.createElement('a');
+      subcategoryOption.classList.add('dropdown-item');
+      subcategoryOption.textContent = subcategory;
+      subcategoryOption.addEventListener('click', () => selectsubcategory(subcategory));
+      subcategoryDropdown.appendChild(subcategoryOption);
+    });
+  }
+
+  document.getElementById('subcategory').style.display = 'block';
+}
+
+function selectsubcategory(value) {
+  // Update the selected value in the title
+  document.getElementById('selectsubcategory').innerText = value;
+  document.getElementById('subcategoryInput').value = value;
+}
+
+</script>
+
+
+
+        <div class="col-md-auto d-flex justify-content-center" id="identity">
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="mr-auto"></i>
+              <span id="selectIdentity">Identity</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+      <a class="dropdown-item color-1" id="semua" onclick="selectIdentity('All')">All</a>
+      <a class="dropdown-item color-2" id="oku" onclick="selectIdentity('OKU')">OKU (People with Disabilities)</a>
+      <a class="dropdown-item color-3" id="orangasli" onclick="selectIdentity('Orang Asli')">Orang Asli (Indigenous People)</a>
+
+    </div>
+          </div>
+        </div>
+        <input type="hidden" name="identity" id="identityInput" value="">
+
+        <script>
+          function selectIdentity(value) {
+            // Update the selected value in the title
+            document.getElementById('selectIdentity').innerText = value;
+            document.getElementById('identityInput').value = value;
+          }
+        </script>
+
+
+
+<div class="col-md-auto d-flex justify-content-center" id="state">
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mr-auto"></i>
+            <span id="selectState">State</span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right scrollable-dropdown">
+            <a class="dropdown-item color-1" id="default" onclick="selectState('All')">All</a>
+            <a class="dropdown-item color-2" id="johor" onclick="selectState('Johor')">Johor</a>
+            <a class="dropdown-item color-3" id="selangor" onclick="selectState('Selangor')">Selangor</a>
+            <a class="dropdown-item color-4" id="kedah" onclick="selectState('Kedah')">Kedah</a>
+            <a class="dropdown-item color-5" id="melaka" onclick="selectState('Melaka')">Melaka</a>
+            <a class="dropdown-item color-6" id="penang" onclick="selectState('Penang')">Penang</a>
+            <a class="dropdown-item color-7" id="kelantan" onclick="selectState('Kelantan')">Kelantan</a>
+            <a class="dropdown-item color-8" id="terengganu" onclick="selectState('Terengganu')">Terengganu</a>
+            <a class="dropdown-item color-9" id="negeri9" onclick="selectState('Negeri Sembilan')">Negeri Sembilan</a>
+            <a class="dropdown-item color-10" id="pahang" onclick="selectState('Pahang')">Pahang</a>
+            <a class="dropdown-item color-11" id="perak" onclick="selectState('Perak')">Perak</a>
+            <a class="dropdown-item color-12" id="perlis" onclick="selectState('Perlis')">Melaka</a>
+            <a class="dropdown-item color-13" id="wilayah" onclick="selectState('Wilayah Persekutuan')">Wilayah Persekutuan</a>
+            <a class="dropdown-item color-14" id="sabah" onclick="selectState('Sabah')">Sabah</a>
+            <a class="dropdown-item color-15" id="sarawak" onclick="selectState('Sarawak')">Sarawak</a>
+
+
+            <!-- Add more state options as needed -->
+        </div>
+    </div>
+</div>
+<input type="hidden" name="state" id="stateInput" value="">
+
+<script>
+    function selectState(value) {
+        // Update the selected value in the title
+        document.getElementById('selectState').innerText = value;
+        document.getElementById('stateInput').value = value;
+    }
+</script>
+
+<script>
+  function sendDataToServer() {
+    // Get the input values from the dropdowns
+    var studyLevel = document.getElementById('studyLevelInput').value;
+    var familyIncome = document.getElementById('familyIncomeInput').value;
+    var cgpa = document.querySelector('input[name="cgpa"]').value;
+    var major = document.getElementById('majorOfStudyInput').value;
+    var identity = document.getElementById('identityInput').value;
+    var state = document.getElementById('stateInput').value;
+
+    // Check if any field is empty
+    if (major === "" || cgpa === "") {
+      // Display error message
+      var errorMessage = "Please fill in all the required fields.";
+      document.getElementById("errorMessage").innerText = errorMessage;
+      document.getElementById("errorMessage").style.display = "block";
+
+      // Prevent form submission
+      return false;
+    }
+
+    // Create a form dynamically
+    var form = document.createElement('form');
+    form.method = 'POST';
+    form.action = '/result';
+
+    // Create hidden input fields for the form
+    var studyLevelInput = document.createElement('input');
+    studyLevelInput.type = 'hidden';
+    studyLevelInput.name = 'study_level';
+    studyLevelInput.value = studyLevel;
+
+    var familyIncomeInput = document.createElement('input');
+    familyIncomeInput.type = 'hidden';
+    familyIncomeInput.name = 'family_income';
+    familyIncomeInput.value = familyIncome;
+
+    var cgpaInput = document.createElement('input');
+    cgpaInput.type = 'hidden';
+    cgpaInput.name = 'cgpa';
+    cgpaInput.value = cgpa;
+
+    var majorInput = document.createElement('input');
+    majorInput.type = 'hidden';
+    majorInput.name = 'major_of_study';
+    majorInput.value = major;
+
+    var identityInput = document.createElement('input');
+    identityInput.type = 'hidden';
+    identityInput.name = 'identity';
+    identityInput.value = identity;
+
+    var stateInput = document.createElement('input');
+    stateInput.type = 'hidden';
+    stateInput.name = 'state';
+    stateInput.value = state;
+
+    // Append the hidden input fields to the form
+    form.appendChild(studyLevelInput);
+    form.appendChild(familyIncomeInput);
+    form.appendChild(cgpaInput);
+    form.appendChild(majorInput);
+    form.appendChild(identityInput);
+    form.appendChild(stateInput);
+
+    // Append the form to the document body and submit it
+    document.body.appendChild(form);
+    form.submit();
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+           <div class="col-md-auto d-flex justify-content-center align-items-center" id="cgpaInput">
+  <div class="input-group">
+    <span class="input-group-text bg-primary text-white" style="border-radius: 0; padding: 0.2rem 0.5rem; font-size: 0.8rem;">CGPA</span>
+    <input type="text" class="form-control" name="cgpa" placeholder="Enter CGPA">
+  </div>
+</div>
+
+
+
+      <div class="text-center mt-3" data-aos="fade-up">
+  <div class="col-12">
+    <button class="get-started-btn scrollto" type="submit" onclick="sendDataToServer()">Confirm</button>
+  </div>
+</div>
+
+       <script>
+  // Check if sessionStorage is supported by the browser
+  if (typeof Storage !== "undefined") {
+    // Check if the page was refreshed
+    if (performance.navigation.type === 1) {
+      // Page was refreshed, clear sessionStorage
+      sessionStorage.clear();
+    } else {
+      // Page was not refreshed, retrieve the previously selected values from sessionStorage
+      var studyLevel = sessionStorage.getItem("selectedStudyLevel");
+      var familyIncome = sessionStorage.getItem("selectedFamilyIncome");
+      var majorOfStudy = sessionStorage.getItem("selectedMajorOfStudy");
+      var subcategory = sessionStorage.getItem("selectedSubcategory");
+      var identity = sessionStorage.getItem("selectedIdentity");
+      var state = sessionStorage.getItem("selectedState");
+
+      // Set the selected values in the dropdowns
+      if (studyLevel) {
+        document.getElementById("selectStudyLevel").innerText = studyLevel;
+        document.getElementById("studyLevelInput").value = studyLevel;
+      }
+      if (familyIncome) {
+        document.getElementById("selectedFamilyIncome").innerText = familyIncome;
+        document.getElementById("familyIncomeInput").value = familyIncome;
+      }
+      if (majorOfStudy) {
+        document.getElementById("selectmajor").innerText = majorOfStudy;
+        document.getElementById("majorOfStudyInput").value = majorOfStudy;
+      }
+      if (subcategory) {
+        document.getElementById("selectsubcategory").innerText = subcategory;
+        document.getElementById("subcategoryInput").value = subcategory;
+      }
+      if (identity) {
+        document.getElementById("selectIdentity").innerText = identity;
+        document.getElementById("identityInput").value = identity;
+      }
+      if (state) {
+        document.getElementById("selectState").innerText = state;
+        document.getElementById("stateInput").value = state;
+      }
+    }
+
+    // Save the selected values to sessionStorage when the dropdowns change
+    document.getElementById("studyLevel").addEventListener("click", function() {
+      sessionStorage.setItem("selectedStudyLevel", document.getElementById("selectStudyLevel").innerText);
+    });
+    document.getElementById("familyincome").addEventListener("click", function() {
+      sessionStorage.setItem("selectedFamilyIncome", document.getElementById("selectedFamilyIncome").innerText);
+    });
+    document.getElementById("major").addEventListener("click", function() {
+      sessionStorage.setItem("selectedMajorOfStudy", document.getElementById("selectmajor").innerText);
+    });
+    document.getElementById("subcategory").addEventListener("click", function() {
+      sessionStorage.setItem("selectedSubcategory", document.getElementById("selectsubcategory").innerText);
+    });
+    document.getElementById("identity").addEventListener("click", function() {
+      sessionStorage.setItem("selectedIdentity", document.getElementById("selectIdentity").innerText);
+    });
+    document.getElementById("state").addEventListener("click", function() {
+      sessionStorage.setItem("selectedState", document.getElementById("selectState").innerText);
+    });
+  }
+</script>
+
+
+
+
+
+
+      </div>
+    </form>
+  </div>
+</section>
+
+
+
+
+    <script src="static/js/js/jquery.min.js"></script>
+    <script src="static/js/js/popper.js"></script>
+    <script src="static/js/js/bootstrap.min.js"></script>
+    <script src="static/js/js/main.js"></script>
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </main><!-- End #main -->
+
+<section>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Nafeszasyiqin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">Nafeszasyiqin</a>
+    </div>
+  </footer><!-- End Footer -->
+  </section>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/chart.js/chart.umd.js"></script>
+  <script src="static/vendor/echarts/echarts.min.js"></script>
+  <script src="static/vendor/quill/quill.min.js"></script>
+  <script src="static/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="static/vendor/tinymce/tinymce.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main2.js"></script>
+
+</body>
+
+</html>

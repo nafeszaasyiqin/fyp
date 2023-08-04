@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Result iStudentFinancial</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+   <!-- Favicons -->
+  <link href="static/images/icon.jpg" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="static/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+   <header id="header" class="header fixed-top d-flex align-items-center">
+  <div class="d-flex align-items-center justify-content-between">
+    <a href="/" class="logo d-flex align-items-center">
+      <img src="static/img/rw.png" alt="">
+    </a>
+    <i class="bi bi-list toggle-sidebar-btn"></i>
+  </div><!-- End Logo -->
+
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+
+         <li class="nav-item dropdown pe-3">
+  {% if student %}
+    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+      <img src="static/images/{{ student.stu_image }}" alt="Profile" class="rounded-circle">
+      <span class="d-none d-md-block dropdown-toggle ps-2">{{ student.stu_name }}</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+      <li class="dropdown-header">
+        <h6>{{ student.stu_name }}</h6>
+        <span>{{ student.stu_id }}</span>
+      </li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+    </ul>
+  {% else %}
+    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+      <img src="static/images/guest_profile.jpg" alt="Guest" class="rounded-circle">
+      <span class="d-none d-md-block dropdown-toggle ps-2">Guest</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+      <li class="dropdown-header">
+        <h6>You are in as guest</h6>
+
+      </li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+    </ul>
+  {% endif %}
+</li>
+
+
+
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+</header><!-- End Header -->
+
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/guide">
+          <i class="bi bi-grid"></i>
+          <span>Guideline</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+
+
+  <!-- Other navigation items -->
+  <li class="nav-item">
+    <a class="nav-link" href="/dashboard1" onclick="scrollToSection('recommend')">
+      <i class="bi bi-grid"></i>
+      <span>Recommend Me!</span>
+    </a>
+  </li>
+
+
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="/shortlist">
+          <i class="bi bi-grid"></i>
+          <span>My Shortlist</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+
+
+
+
+<!--
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="charts-chartjs.html">
+              <i class="bi bi-circle"></i><span>Chart.js</span>
+            </a>
+          </li>
+          <li>
+            <a href="charts-apexcharts.html">
+              <i class="bi bi-circle"></i><span>ApexCharts</span>
+            </a>
+          </li>
+          <li>
+            <a href="charts-echarts.html">
+              <i class="bi bi-circle"></i><span>ECharts</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Charts Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="icons-bootstrap.html">
+              <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-remix.html">
+              <i class="bi bi-circle"></i><span>Remix Icons</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>Boxicons</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Icons Nav
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="users-profile.html">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+
+
+
+
+      </li><!-- End Profile Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-faq.html">
+          <i class="bi bi-question-circle"></i>
+          <span>F.A.Q</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-contact.html">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li><!-- End Contact Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-register.html">
+          <i class="bi bi-card-list"></i>
+          <span>Register</span>
+        </a>
+      </li><!-- End Register Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-login.html">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Login</span>
+        </a>
+      </li><!-- End Login Page Nav
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-error-404.html">
+          <i class="bi bi-dash-circle"></i>
+          <span>Error 404</span>
+        </a>
+      </li> End Error 404 Page Nav -->  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" onclick="showLogoutModal()">
+    <i class="bi bi-file-earmark"></i>
+    <span>Log Out</span>
+  </a>
+</li><!-- End Blank Page Nav -->
+
+        <style>
+    /* Additional styles for the pop-up message */
+    .logout-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+        align-items: center;
+    justify-content: center;
+    }
+    .logout-modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+         text-align: center;
+    }
+
+     .logout-modal-content button {
+    background-color: #01026b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  </style>
+
+<div class="logout-modal" id="logoutModal">
+    <div class="logout-modal-content">
+      <h2>Logout Confirmation</h2>
+      <p>Are you sure you want to logout?</p>
+      <button onclick="logout()">Logout</button>
+      <button onclick="hideLogoutModal()">Cancel</button>
+    </div>
+  </div>
+
+ <script>
+    function showLogoutModal() {
+      document.getElementById("logoutModal").style.display = "block";
+    }
+
+    function hideLogoutModal() {
+      document.getElementById("logoutModal").style.display = "none";
+    }
+
+    function logout() {
+      // Perform logout operation here
+      // Redirect to the desired page after logout
+      window.location.href = "/logout";
+    }
+  </script>
+
+
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Recommendation</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/dashboard1">Back</a></li>
+          <li class="breadcrumb-item active">Recommendation</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+
+<!-- HEREEEEEEE-->
+
+
+ <link href="static/css/style3.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+
+
+
+<style>
+
+  .similarity-badge {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 8px;
+  }
+
+  /* Custom CSS for different similarity ranges */
+  .high-similarity {
+    color: white;
+    background-color: #4caf50; /* Green color for high similarity */
+  }
+
+  .medium-similarity {
+    color: #333;
+    background-color: #ffc107; /* Yellow color for medium similarity */
+  }
+
+  .low-similarity {
+    color: white;
+    background-color: #f44336; /* Red color for low similarity */
+  }
+
+  .no-recommendations-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust the height as needed */
+}
+
+.no-recommendations {
+  text-align: center;
+}
+
+
+ .financial-aid-types {
+  margin-bottom: 20px;
+       text-align: center; /* Center-align the content */
+}
+
+ .type-filter.active {
+  background-color: #8c0000;
+  color: #fff;
+}
+
+.type-filter {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #000141;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.type-filter:hover {
+  background-color: #2244CC;
+}
+
+
+ .finaid-image {
+  margin-right: 10px;
+  max-width: 100px; /* Adjust the desired width */
+  height: auto;
+  transition: max-width 0.3s ease; /* Add a smooth transition effect */
+}
+
+.finaid-image:hover {
+  max-width: 500px; /* Adjust the desired enlarged width */
+  z-index: 999; /* Ensure the image appears on top */
+}
+
+
+
+
+
+  .recommendation-list {
+    list-style: none;
+    padding: 0;
+  }
+
+ .recommendation-item {
+  margin-bottom: 20px;
+
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+.recommendation-item:hover {
+
+  box-shadow: 0 0 10px #00b5ff; /* Adjust the desired shadow color and size */
+  opacity: 0.9;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+
+.recommendation-item a {
+  text-decoration: none;
+  color: #333;
+}
+
+
+ .expand-btn {
+  display: inline-block;
+  margin-left: 10px;
+  color: #000162;
+  cursor: pointer;
+  font-size: 18px; /* Adjust the desired font size */
+  line-height: 1;
+  padding: 2px 6px; /* Adjust the desired padding */
+}
+
+
+
+.description {
+  display: none;
+  margin-top: 10px;
+}
+
+
+
+  .no-recommendations {
+    font-style: italic;
+    color: #888;
+    display: none;
+  }
+ .card-body {
+  display: flex;
+  align-items: flex-start;
+}
+
+.finaid-image {
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+  margin-right: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.finaid-title {
+  margin: 0;
+}
+
+.dateline-amount {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.dateline-logo,
+.amount-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.amount {
+  margin-left: 10px;
+}
+
+.finaid-title.bold {
+    padding-top: 5px; /* Adjust the padding value as needed */
+  font-weight: bold;
+   font-size: 1.2em;
+  color: #000162; /* Adjust the color as desired */
+}
+  .save-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+     background-color: #00b985;
+    color: #eeeeee;
+    border: 2px solid #00b985;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .save-button:hover {
+    background-color: #ffffff;
+      border: 2px solid #eeeeee;
+    color: #000141;
+  }
+
+   .read-button {
+    position: absolute;
+    top: 10px;
+    right: 150px;
+    background-color: #f8c004;
+
+    border: 2px solid #f8c004;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .read-button:hover {
+    background-color: #eaeaea;
+    color: #000162;
+  }
+
+ h4.recommendation-heading {
+  color: #3366FF; /* Set the text color to a desired color */
+  font-size: 24px; /* Adjust the font size */
+  font-weight: bold; /* Make the text bold */
+  /* Add more styling properties as per your preference */
+}
+
+.result-count {
+  text-align: left;
+}
+.hover-text {
+  position: fixed;
+  background-color: #ea0000;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 12px;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.button-hover {
+  position: absolute;
+  background-color: #ea0000;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 12px;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+</style>
+
+
+
+  </head>
+  <body>
+
+<section class="ftco-section">
+  <div class="container">
+    <h4 class="recommendation-heading">Your financial Aid Recommendations</h4>
+
+    <div class="financial-aid-types">
+      <div class="type-filters">
+        <span class="type-filter" onclick="filterByType(this, 'all')">All</span>
+        <span class="type-filter" onclick="filterByType(this, 'scholarship')">Scholarship</span>
+        <span class="type-filter" onclick="filterByType(this, 'Study Loan')">Study Loan</span>
+        <span class="type-filter" onclick="filterByType(this, 'pbu')">Convertible Study Loan (PBU)</span>
+          <span class="type-filter" onclick="filterByType(this, 'One-off Aid')">One-off Aid</span>
+      </div>
+      <div class="result-count">Showing <span id="result-number"></span> result(s)</div>
+    </div>
+
+    <ul class="recommendation-list">
+
+      {% if recommendations|length == 0 %}
+    <div class="no-recommendations-container">
+      <p class="no-recommendations">No financial aid recommendations found for the selected crtieria.</p>
+    </div>
+    {% endif %}
+
+
+
+
+      {% for recommendation in recommendations %}
+      <li class="recommendation-item" data-type="{{ recommendation['finaidtype'] }}">
+        <div class="card">
+          <div class="card-body">
+
+             <!-- Display similarity badge with hover effect -->
+          <div class="similarity-badge {% if recommendation.similarity|float >= 30 %}high-similarity{% elif recommendation.similarity|float >= 20 %}medium-similarity{% else %}low-similarity{% endif %}"
+               title="{% if recommendation.similarity|float >= 30 %}High Similarity{% elif recommendation.similarity|float >= 20 %}Medium Similarity{% else %}Low Similarity{% endif %}">
+            {{ recommendation.similarity }}%
+          </div>
+
+
+
+            <img src="{{ recommendation.finaidimg }}" alt="Financial Aid Image" class="finaid-image">
+            <div class="content">
+              <a href="{{ recommendation.finaidlink }}" class="finaid-title bold">{{ recommendation.finaidname }}</a>
+              <span class="expand-btn" onclick="toggleDescription(this)">+</span>
+              <div class="description">{{ recommendation.description }}</div>
+
+               <!-- Display similarity percentage -->
+               <!-- Display similarity percentage -->
+
+
+              <div class="dateline-amount">
+                {% if recommendation.dateline != recommendation.dateline %}
+                <!-- Check if it is NaN -->
+                <span class="dateline">
+                  <img src="https://cdn.onlinewebfonts.com/svg/img_517066.png" alt="Dateline Logo" class="dateline-logo"
+                   title="Application Dateline">
+                  <span class="hover-text">Application Dateline</span>
+                  Closed
+                </span>
+                {% else %}
+                <span class="dateline">
+                  <img src="https://cdn.onlinewebfonts.com/svg/img_517066.png" alt="Dateline Logo" class="dateline-logo"
+                    title="Application Dateline">
+                  <span class="hover-text">Application Dateline</span>
+                  {{ recommendation.dateline }}
+                </span>
+                {% endif %}
+
+                {% if recommendation.amount == 0 %}
+                <span class="amount">
+                  <img src="https://th.bing.com/th/id/R.a578d8e1c8cc1a8b8b63a6b72ec0171f?rik=WNGwiFa7A9IzvA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fdownload_387475.png&ehk=mjltdqDxOCYrNai3QjZPNCtyoOXo0CtiGBDTKjEIwCw%3d&risl=&pid=ImgRaw&r=0"
+                    alt="Amount Logo" class="amount-logo" title="Amount per year">
+                  <span class="hover-text">Amount per year</span>
+                  Not Stated
+                </span>
+                {% else %}
+                <span class="amount">
+                  <img src="https://th.bing.com/th/id/R.a578d8e1c8cc1a8b8b63a6b72ec0171f?rik=WNGwiFa7A9IzvA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fdownload_387475.png&ehk=mjltdqDxOCYrNai3QjZPNCtyoOXo0CtiGBDTKjEIwCw%3d&risl=&pid=ImgRaw&r=0"
+                    alt="Amount Logo" class="amount-logo" title="Amount per year">
+                  <span class="hover-text">Amount per year</span>
+                  RM{{ recommendation.amount }}
+                </span>
+                {% endif %}
+
+                <a class="read-button" href="{{ recommendation.finaidlink }}">
+                  Read More
+                </a>
+
+              <button class="save-button" onclick="saveRecommendation('{{ recommendation.finaidname }}', '{{ recommendation.finaidlink }}', this)">
+  Add to Shortlist
+  <span class="button-hover">Save your recommendation</span>
+</button>
+
+
+                <style>
+                  .save-button.added {
+                    background-color: grey;
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% if recommendations %}
+    <p class="no-recommendations">No financial aid recommendations found.</p>
+    {% endif %}
+  </div>
+</section>
+
+
+
+<script>
+
+function saveRecommendation(recommendationName, recommendationLink, buttonElement) {
+  // Send a GET request to check if the user is signed in
+  fetch('/check-signed-in')
+    .then(response => response.json())
+    .then(data => {
+      if (data.signedIn) {
+        // User is signed in, proceed with saving recommendation
+        const formData = new FormData();
+        formData.append('recommendation_name', recommendationName);
+        formData.append('recommendation_link', recommendationLink);
+
+        // Send a POST request to the backend API
+        fetch('/save-recommendation', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    recommendation_name: recommendationName,
+    recommendation_link: recommendationLink
+  })
+})
+
+          .then(response => response.json())
+          .then(data => {
+            // Handle the response from the backend
+            console.log(data.message); // Print the success message
+            buttonElement.classList.add('added'); // Update the button style to indicate it has been added
+          })
+          .catch(error => {
+            // Handle any errors
+            console.error('Error:', error);
+          });
+      } else {
+        // User is not signed in, show confirmation dialog
+        const confirmSignIn = confirm('You need to sign in to add this recommendation to your shortlist. Do you want to sign in now?');
+        if (confirmSignIn) {
+          // Redirect the user to the sign-in page
+          window.location.href = '/signin'; // Replace with the actual sign-in page URL
+        }
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
+
+  // Call the updateResultCount() function when the page loads or whenever the recommendation list changes
+  window.addEventListener('DOMContentLoaded', function() {
+    updateResultCount();
+    filterByType(null, 'all'); // Apply 'all' filter by default
+  });
+
+  function updateResultCount() {
+    var resultNumber = document.getElementById('result-number');
+    var visibleRecommendations = document.querySelectorAll('.recommendation-item:not([style*="display: none"])');
+    resultNumber.textContent = visibleRecommendations.length;
+  }
+
+  function filterByType(element, selectedType) {
+    var typeFilters = document.getElementsByClassName("type-filter");
+    for (var i = 0; i < typeFilters.length; i++) {
+      typeFilters[i].classList.remove("active");
+    }
+    if (element) {
+      element.classList.add("active");
+    }
+
+    var recommendations = document.getElementsByClassName("recommendation-item");
+    var noRecommendationsMessage = document.getElementsByClassName("no-recommendations")[0];
+    var foundRecommendation = false;
+
+    for (var i = 0; i < recommendations.length; i++) {
+      var recommendation = recommendations[i];
+      var recommendationType = recommendation.dataset.type.trim(); // Remove trailing whitespace
+
+      if (selectedType === "all" || recommendationType === selectedType) {
+        recommendation.style.display = "block";
+        foundRecommendation = true;
+      } else {
+        recommendation.style.display = "none";
+      }
+    }
+
+    if (foundRecommendation) {
+      noRecommendationsMessage.style.display = "none";
+    } else {
+      noRecommendationsMessage.style.display = "block";
+    }
+
+    updateResultCount(); // Update the result count
+  }
+
+  function toggleDescription(element) {
+    var description = element.nextElementSibling;
+    if (description.style.display === "none") {
+      description.style.display = "block";
+      element.textContent = "-";
+    } else {
+      description.style.display = "none";
+      element.textContent = "+";
+    }
+  }
+</script>
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+<script>
+// Add this script at the end of the HTML body or in a separate JavaScript file
+
+// Function to set the "active" class on the default filter
+function setDefaultFilter() {
+  const allFilter = document.getElementById('allFilter');
+  allFilter.classList.add('active');
+}
+
+// Call the function to set the default filter on page load
+setDefaultFilter();
+</script>
+
+
+
+
+
+
+
+
+    <script src="static/js/js/jquery.min.js"></script>
+    <script src="static/js/js/popper.js"></script>
+    <script src="static/js/js/bootstrap.min.js"></script>
+    <script src="static/js/js/main.js"></script>
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </main><!-- End #main -->
+
+<section>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Nafeszasyiqin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">Nafeszasyiqin</a>
+    </div>
+  </footer><!-- End Footer -->
+  </section>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/chart.js/chart.umd.js"></script>
+  <script src="static/vendor/echarts/echarts.min.js"></script>
+  <script src="static/vendor/quill/quill.min.js"></script>
+  <script src="static/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="static/vendor/tinymce/tinymce.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main2.js"></script>
+
+</body>
+
+</html>
